@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box div{
+      width: 100px;
+      height: 100px;
+      /* display: inline-block; */
+      float:right;
+    }
+    .div1{
+      background-color: red;
+    }
+    .div2{
+      background-color: blue;
+    }
+    .div3{
+      background-color: green;
+    }
+    .box{
+      background-color: yellow;
+    }
+    /* p{
+      clear: both;
+    } */
+    /* ::after 伪元素 */
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="box clearfix">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+  </div>
+</body>
+</html>
