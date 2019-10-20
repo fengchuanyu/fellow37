@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* *{
+      margin:0;
+    }
+    div{
+      color: red !important;
+    }
+    
+    #text1{
+      color: green;
+    }
+    #text3{
+      color: yellow;
+    }
+    .text2{
+      color: blue;
+    } */
+    /* 通配符选择器（*）1 < 标签选择器10 < 类选择器100 < ID选择器1000 <内联选择器10000 < !important100000*/
+  
+    .div1{
+      color: red;
+    }
+    .box .div1{
+      color: blue;
+    }
+    #div3{
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="text1">hello</div>
+  <div class="text2" id="text3" style="color:purple">world</div> -->
+  <div class="box">
+    <div class="div1" id="div3">hello</div>
+    <div class="div2">world</div>
+  </div>
+  
+</body>
+</html>

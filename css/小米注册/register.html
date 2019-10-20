@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* css reset start*/
+    body{
+      margin:0;
+      background: #f9f9f9;
+    }
+    p{
+      margin:0;
+    }
+    h4{
+      margin:0;
+    }
+    /* css reset end*/
+    .container{
+      background-color: white;
+      width: 854px;
+      height: 500px;
+      padding:0 34px 30px;
+      margin: 0 auto;
+      margin-top:100px;
+    }
+    /* top-logo start */
+    .container .top-logo{
+      padding-bottom: 40px;
+    }
+    .container .top-logo a{
+      width: 49px;
+      height: 48px;
+      display: block;
+      margin:0 auto;
+      cursor:default;
+      background-image: url("./milogo.png");
+    }
+    /* top-logo end */
+    /* register-info start */
+    .container .register-info h4{
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+    }
+    /* register-info end */
+    /* register-form start */
+    .container .register-form{
+      width: 332px;
+      padding: 30px 0;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+    .register-form .select-regions .sr-box{
+      height: 40px;
+      border: 1px solid #e8e8e8;
+      padding-left: 14px;
+      color: #555;
+      line-height: 40px;
+    }
+    .register-form h4{
+      padding-bottom: 5px;
+      color: #333;
+      font-weight: normal;
+      font-size: 14px;
+    }
+    .register-form .sr-box p{
+      width: 275px;
+      border-right: 1px solid #e8e8e8;
+      float: left;
+    }
+    .register-form .sr-box i{
+      float: left;
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: 11px 12px 0 12px;
+      background-image: url("./icon_user.png")
+    }
+    /* register-form end */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-logo">
+      <a href="javascript:void(0)"></a>
+    </div>
+    <div class="register-info">
+      <h4>注册小米帐号</h4>
+    </div>
+    <div class="register-form">
+      <h4>国家/地区</h4>
+      <div class="select-regions">
+        <div class="sr-box">
+          <p>中国</p>
+          <i></i>
+        </div>
+      </div>
+      <div class="region_tip_text"></div>
+      <h4></h4>
+      <div class="select-cycode"></div>
+      <div class="submit-btn"></div>
+    </div>
+    <div class="register-msg"></div>
+  </div>
+</body>
+</html>
