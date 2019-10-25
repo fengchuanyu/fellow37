@@ -8,7 +8,6 @@
   <style>
     /* css reset start*/
     body{
-      font-size: 14px;
       margin:0;
       background: #f9f9f9;
     }
@@ -17,16 +16,6 @@
     }
     h4{
       margin:0;
-    }
-    a{
-      text-decoration: none;
-    }
-    ul{
-      padding: 0;
-      margin: 0;
-    }
-    li{
-      list-style: none;
     }
     /* css reset end*/
     .container{
@@ -101,85 +90,7 @@
       height: 40px;
       border: 1px solid #e8e8e8;
     }
-    .select-cycode .sc-box .scb-left{
-      width: 50px;
-      padding: 0 9px;
-      height: 40px;
-      line-height: 40px;
-      float: left;
-      border-right: 1px solid #e8e8e8;
-    }
-    .select-cycode .scb-left p{
-      display: inline-block;
-    }
-    .select-cycode .scb-left .icon-arrow{
-      display: inline-block;
-      margin-left: 6px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #9d9d9d transparent transparent transparent;
-    }
-    .select-cycode .sc-box .scb-right{
-      width: 261px;
-      height: 40px;
-      float: left;
-    }
-    .select-cycode .scb-right input{
-      border: 0;
-      outline: none;
-      height: 20px;
-      line-height: 20px;
-      padding: 10px;
-    }
-    .register-form .submit-btn input{
-      width: 330px;
-      height: 42px;
-      color: #ffffff;
-      font-size: 14px;
-      background-color: #ff6700;
-      border: 1px solid rgba(186,186,186,0.3);
-      margin-top:30px;
-    }
     /* register-form end */
-    /* register-msg start */
-    .register-msg{
-      text-align: center;
-      padding-top:40px;
-      color: #9d9d9d;
-      font-size: 14px;
-    }
-    .register-msg a{
-      color: #333;
-      font-weight: bold;
-    }
-    /* register-msg edn */
-    /* footer start */
-    .footer{
-      margin-top:10px;
-    }
-    .footer .link-area ul{
-      text-align: center;
-    }
-    .footer .link-area li{
-      display: inline-block;
-      color: #757575;
-    }
-    .link-area li span{
-      padding: 0 10px;
-    }
-    .link-area li span:hover{
-      color: #333;
-      cursor: pointer;
-    }
-    .link-area li .active{
-      color: #333;
-    }
-    .footer .intro{
-      color: #9d9d9d;
-      text-align: center;
-      padding:10px 0;
-    }
-    /* footer end */
   </style>
 </head>
 <body>
@@ -204,38 +115,13 @@
       <h4>手机号码</h4>
       <div class="select-cycode">
         <div class="sc-box">
-          <div class="scb-left">
-            <p>+86</p>
-            <i class="icon-arrow"></i>
-          </div>
-          <div class="scb-right">
-            <input type="text" placeholder="请输入手机号码">
-          </div>
+          <div class="scb-left"></div>
+          <div class="scb-right"></div>
         </div>
       </div>
-      <div class="submit-btn">
-        <input type="button" value="立即注册">
-      </div>
+      <div class="submit-btn"></div>
     </div>
-    <div class="register-msg">
-        已阅读并同意：小米 
-        <a href="javascript:void(0)">用户协议</a>
-        和 
-        <a href="javascript:void(0)">隐私政策</a>
-    </div>
-  </div>
-  <div class="footer">
-    <div class="link-area">
-      <ul>
-        <li> <span class="active">简体</span> | </li>
-        <li> <span>繁体</span> | </li>
-        <li> <span>English</span> | </li>
-        <li> <span>常见问题</span></li>
-      </ul>
-    </div>
-    <div class="intro">
-        小米公司版权所有-京ICP备10046444-<img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png">京公网安备11010802020134号-京ICP证110507号
-    </div>
+    <div class="register-msg"></div>
   </div>
 </body>
 </html>
