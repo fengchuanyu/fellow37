@@ -1,76 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-    *{
-      margin:0;
-      padding:0;
+    * {
+      margin: 0;
+      padding: 0;
     }
-    a{
+
+    a {
       text-decoration: none;
     }
-    /* header start */
-    .header .header-content{
-      width: 1130px;
-      margin:0 auto;
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
     }
-    .header .header-logo{
+
+    /* header start */
+    .header .header-content {
+      width: 1130px;
+      margin: 0 auto;
+    }
+
+    .header .header-logo {
       width: 200px;
       height: 98px;
       background-image: url('./img/mistore_logo.png');
       /* background-repeat: no-repeat; */
     }
+
     /* header end */
     /* content start */
-    .content .content-bg{
+    .content .content-bg {
       height: 588px;
       background-image: url("./img/bg.jpg");
       background-position: center;
     }
-    .content .content-login{
+
+    .content .content-login {
       width: 1130px;
-      margin:0 auto;
+      margin: 0 auto;
       overflow: hidden;
     }
-    .content .login-form{
+
+    .content .login-form {
       width: 410px;
       height: 556px;
       background-color: #fff;
       margin-right: 0;
-      margin-left:auto;
-      margin-top:32px;
+      margin-left: auto;
+      margin-top: 32px;
     }
-    .content-login .login-type{
+
+    .content-login .login-type {
       font-size: 24px;
       text-align: center;
       padding: 27px 0 24px;
     }
-    .content-login .login-type a{
+
+    .content-login .login-type a {
       color: #666;
     }
-    .content-login .login-type span{
+
+    .content-login .login-type span {
       width: 1px;
       margin: 0 35px 0 42px;
       border: 1px solid #e0e0e0;
     }
-    .content-login .login-type .active{
+
+    .content-login .login-type .active {
       color: #f56600;
     }
-    .content-login .form-bar{
+
+    .content-login .form-bar {
       width: 348px;
-      margin:0 auto;
+      margin: 0 auto;
     }
-    .content-login .form-bar input{
-      width: 306px;
+
+    .content-login .form-bar input {
+      width: 313px;
+      height: 22px;
+      line-height: 22px;
+      padding: 13px 16px 13px 14px;
+      outline: none;
+      margin-bottom: 14px;
+      font-size: 14px;
     }
+
+    .content-login .form-bar button {
+      width: 100%;
+      height: 50px;
+      display: block;
+      background-color: #ff6700;
+      font-size: 14px;
+      color: #fff;
+      border: none;
+    }
+
+    .content-login .form-bar .login-btn {
+      padding-top: 10px;
+    }
+
+    .content-login .form-bar .fbi-left {
+      float: left;
+      color: #ff6700;
+    }
+
+    .content-login .form-bar .fbi-right {
+      float: right;
+      color: #999;
+    }
+
+    .content-login .fb-info {
+      font-size: 14px;
+      padding-top: 10px;
+    }
+
+    .content-login .fb-info a {
+      color: #999;
+    }
+
     /* content end */
-    
+    /* footer start */
+    .footer{
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+    .footer .footer-top{
+      text-align: center;
+    }
+    .footer .footer-top li{
+      display: inline-block;
+      color: #757575;
+      font-size: 14px;
+    }
+    .footer .footer-top span{
+      padding: 0 10px;
+    }
+    .footer .footer-bottom{
+      text-align: center;
+      color: #757575;
+      font-size: 14px;
+    }
+    .footer .footer-bottom a{
+      color: #757575;
+    }
+    /* footer end*/
   </style>
 </head>
+
 <body>
   <div class="header">
     <div class="header-content">
@@ -88,10 +173,14 @@
             <a href="javascript:void(0)">扫码登录</a>
           </div>
           <div class="form-bar">
-            <input type="text">
-            <input type="text">
-            <input type="button" value="登录">
-            <div class="fb-info">
+            <input type="text" placeholder="邮箱/手机号码/小米ID">
+            <input type="text" placeholder="密码">
+            <!-- <input type="button" value="登录"> -->
+            <div class="login-btn">
+              <button>登录</button>
+            </div>
+
+            <div class="fb-info clearfix">
               <div class="fbi-left">手机短信登录/注册</div>
               <div class="fbi-right">
                 <a href="javascript:void(0)">立即注册</a>
@@ -105,6 +194,34 @@
       </div>
     </div>
   </div>
-  <div class="footer"></div>
+  <div class="footer">
+    <div class="footer-top">
+      <ul>
+        <li>
+          <span>简体</span>
+          |
+        </li>
+        <li>
+          <span>繁体</span>
+          |
+        </li>
+        <li>
+          <span>English</span>
+          |
+        </li>
+        <li>
+          <span>常见问题</span>
+          |
+        </li>
+        <li>
+          <span>隐私政策</span>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+        <p class="nf-intro">小米公司版权所有-京ICP备10046444-<a class="beian-record-link" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134"><span><img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png"></span>京公网安备11010802020134号</a>-京ICP证110507号</p>
+    </div>
+  </div>
 </body>
+
 </html>
