@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    a{
+      text-decoration: none;
+    }
+    /* header start */
+    .header .header-content{
+      width: 1130px;
+      margin:0 auto;
+    }
+    .header .header-logo{
+      width: 200px;
+      height: 98px;
+      background-image: url('./img/mistore_logo.png');
+      /* background-repeat: no-repeat; */
+    }
+    /* header end */
+    /* content start */
+    .content .content-bg{
+      height: 588px;
+      background-image: url("./img/bg.jpg");
+      background-position: center;
+    }
+    .content .content-login{
+      width: 1130px;
+      margin:0 auto;
+      overflow: hidden;
+    }
+    .content .login-form{
+      width: 410px;
+      height: 556px;
+      background-color: #fff;
+      margin-right: 0;
+      margin-left:auto;
+      margin-top:32px;
+    }
+    .content-login .login-type{
+      font-size: 24px;
+      text-align: center;
+      padding: 27px 0 24px;
+    }
+    .content-login .login-type a{
+      color: #666;
+    }
+    .content-login .login-type span{
+      width: 1px;
+      margin: 0 35px 0 42px;
+      border: 1px solid #e0e0e0;
+    }
+    .content-login .login-type .active{
+      color: #f56600;
+    }
+    .content-login .form-bar{
+      width: 348px;
+      margin:0 auto;
+    }
+    .content-login .form-bar input{
+      width: 306px;
+    }
+    /* content end */
+    
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <div class="header-logo"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-bg">
+      <!-- 登录框区域 -->
+      <div class="content-login">
+        <div class="login-form">
+          <div class="login-type">
+            <a class="active" href="javascript:void(0)">帐号登录</a>
+            <span></span>
+            <a href="javascript:void(0)">扫码登录</a>
+          </div>
+          <div class="form-bar">
+            <input type="text">
+            <input type="text">
+            <input type="button" value="登录">
+            <div class="fb-info">
+              <div class="fbi-left">手机短信登录/注册</div>
+              <div class="fbi-right">
+                <a href="javascript:void(0)">立即注册</a>
+                <span>|</span>
+                <a href="javascript:void(0)">忘记密码？</a>
+              </div>
+            </div>
+          </div>
+          <div class="login-icon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+</body>
+</html>
