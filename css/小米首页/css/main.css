@@ -5,6 +5,10 @@
 a{
   text-decoration: none;
 }
+.container{
+  width: 1226px;
+  margin:0 auto;
+}
 /* topbar start */
 .topbar{
   height: 40px;
@@ -12,10 +16,7 @@ a{
   font-size: 12px;
   line-height: 40px;
 }
-.topbar .container{
-  width: 1226px;
-  margin:0 auto;
-}
+
 .topbar .topbar-left{
   float: left;
   color: #424242;
@@ -38,6 +39,8 @@ a{
   color: #b0b0b0;
 }
 .topbar .topbar-cart{
+  position: relative;
+  
   width: 120px;
   background-color: #424242;
   text-align: center;
@@ -57,7 +60,7 @@ a{
   background-color: #fff;
   text-align: center;
   box-shadow: 0 1px 5px #aaa;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 .topbar .appcode img{
@@ -76,7 +79,11 @@ a{
 .topbar .download:hover .appcode{
   height: 148px;
 }
-.topbar .appcode .triangle{
+.topbar .download:hover .triangle{
+  display: block;
+}
+.topbar .triangle{
+  display: none;
   border-width: 12px;
   border-style: solid;
   width: 0;
@@ -84,6 +91,141 @@ a{
   position: absolute;
   left: 50%;
   margin-left: -12px;
-  top:-24px
+  top:17px
+}
+.topbar .cart-menu{
+  width: 316px;
+  height: 0px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  position: absolute;
+  top:40px;
+  z-index: 10;
+  right: 0;
+  transition: all .3s ease;
+  background-color: #fff;
+}
+.topbar-cart:hover{
+  background-color: #fff;
+  color: #ff6700;
+}
+.topbar-cart:hover .cart-menu{
+  height: 100px;
 }
 /* topbar end */
+/* header start */
+
+.header .header-logo,.header .header-nav,.header .header-search{
+  float: left;
+}
+.header .header-logo{
+  width: 62px;
+}
+.header .header-nav{
+  width: 850px;
+}
+.header .header-search{
+  width: 296px;
+}
+.header .hl-content{
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background-color: #ff6700;
+  margin-top: 22px;
+  overflow: hidden;
+}
+.header .hl-content::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: url("../img/mi-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 55px;
+  height: 55px;
+  display: block;
+  transition: all .1s ease;
+}
+.header .hl-content::before{
+  position: absolute;
+  top: 0;
+  left: -55px;
+  content: "";
+  display: block;
+  width: 55px;
+  height: 55px;
+  background-image: url("../img/mi-home.png");
+  background-repeat: no-repeat;
+  background-position:  center;
+  transition: all .3s ease;
+}
+.header .header-logo:hover .hl-content::before{
+  left: 0;
+}
+.header .header-logo:hover .hl-content::after{
+  left: 55px;
+}
+.header .header-nav ul{
+  height: 88px;
+  padding: 12px 0 0 30px;
+  margin-left: 100px;
+}
+.header .header-nav li{
+  list-style: none;
+  display: inline-block;
+  padding: 26px 10px 38px;
+  color: #333;
+  font-size: 16px;
+}
+.header .header-search .form-bar{
+  position: relative;
+  width: 296px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  margin-top: 25px;
+}
+.header .header-search .fb-input{
+  width: 245px;
+  border-right: 1px solid #e0e0e0;
+  height: 50px;
+  display: inline-block;
+}
+.header .fb-input input{
+  border: none;
+  outline: none;
+  height: 48px;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 48px;
+}
+.input-text{
+  position: absolute;
+  top: 13px;
+  left: 80px;
+}
+.input-text span{
+  margin-left: 5px;
+  padding: 0 5px;
+  font-size: 12px;
+  background: #eee;
+  color: #757575;
+  
+}
+.input-text span:hover{
+  background-color: #ff6700;
+  color: #fff;
+  transition: all .5s ease;
+}
+.fb-btn{
+  display: inline-block;
+  height: 50px;
+  margin-left: 5px;
+}
+.fb-btn .iconfont{
+  font-size: 30px;
+  position: relative;
+  top:5px;
+  color: #666
+}
+/* header end */
