@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding:0;
+}
+a{
+  text-decoration: none;
+}
+/* topbar start */
+.topbar{
+  height: 40px;
+  background-color: #333;
+  font-size: 12px;
+  line-height: 40px;
+}
+.topbar .container{
+  width: 1226px;
+  margin:0 auto;
+}
+.topbar .topbar-left{
+  float: left;
+  color: #424242;
+}
+.topbar .topbar-left a,.topbar .topbar-right a{
+  color: #b0b0b0;
+}
+.topbar .topbar-left>a:hover,.topbar .topbar-right>a:hover{
+  color: #fff;
+}
+.topbar .topbar-left>a:hover p{
+  color: #b0b0b0;
+}
+.topbar .topbar-right{
+  float: right;
+  color: #424242;
+}
+.topbar .user-info,.topbar .topbar-cart{
+  display: inline-block;
+  color: #b0b0b0;
+}
+.topbar .topbar-cart{
+  width: 120px;
+  background-color: #424242;
+  text-align: center;
+  margin-left: 15px;
+}
+.topbar .topbar-cart .iconfont{
+  font-size: 12px;
+  margin-right: 5px;
+}
+.topbar .topbar-left .appcode{
+  height: 0;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -62px;
+  width: 124px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 1px 5px #aaa;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.topbar .appcode img{
+  width: 90px;
+  height: 90px;
+  margin: 18px auto 0;
+}
+.topbar .appcode p{
+  line-height: normal;
+}
+.topbar .download{
+  display: inline-block;
+  position: relative;
+ 
+}
+.topbar .download:hover .appcode{
+  height: 148px;
+}
+.topbar .appcode .triangle{
+  border-width: 12px;
+  border-style: solid;
+  width: 0;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -12px;
+  top:-24px
+}
+/* topbar end */
