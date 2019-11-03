@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+    }
+    .box div{
+      color: red !important;    
+    }
+    .item{
+      color: blue;
+    }
+    #div1{
+      color: blueviolet;
+    }
+    /* *(0) < 标签(1) < 类(10) < id(100) < 内联选择器(1000) < !important(10000) */
+  </style>
+</head>
+<body>
+  <div class="box">
+      <div>a</div>
+      <div class="item" id="div1" style="color: green">b</div>
+      <div class="item">c</div>
+  </div>
+  
+</body>
+</html>
