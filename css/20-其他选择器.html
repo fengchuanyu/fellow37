@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box > li{
+      list-style: none;
+    }
+    .div1{
+      width: 100px;
+      height: 0;
+      background-color: red;
+    }
+    .box:hover + .div1{
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <ul class="box">
+    <li>1
+      <ul>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+      </ul>
+    </li>
+    <li>2</li>
+    <li>3</li>
+    <li>45</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+  <div class="div1"></div>
+</body>
+</html>

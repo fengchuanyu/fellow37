@@ -5,9 +5,17 @@
 a{
   text-decoration: none;
 }
+li{
+  list-style: none;
+}
 .container{
   width: 1226px;
   margin:0 auto;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
 }
 /* topbar start */
 .topbar{
@@ -113,6 +121,9 @@ a{
 }
 /* topbar end */
 /* header start */
+.header{
+  position: relative;
+}
 
 .header .header-logo,.header .header-nav,.header .header-search{
   float: left;
@@ -228,4 +239,87 @@ a{
   top:5px;
   color: #666
 }
+.header .nav-menu{
+  height: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 3px 4px rgba(0,0,0,.18);
+  position: absolute;
+  left: 0;
+  top:95px;
+  border-top:1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+/* 调试时打开注释 */
+/* .nav-bar:hover + .nav-menu{
+  height: 229px;
+} */
+.header .nb-list{
+  position: absolute;
+  top:120px;
+  left: 100px;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .nb-list li{
+  display: none;
+  float: left;
+  list-style: none;
+  height: 100px;
+  width: 80px;
+  background-color: red;
+  margin-left: 10px;
+}
+.header .nav-bar li:nth-child(2) .nb-list li{
+  background-color: blue;
+}
+/* 调试时打开注释 */
+/* .nav-bar > li:hover .nb-list li{
+  display: block;
+} */
 /* header end */
+/* swiper start*/
+.swiper-bar .container{
+  position: relative;
+  height: 460px;
+}
+.swiper-bar .site-category{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 234px;
+  height: 460px;
+  z-index: 10;
+  background-color: rgba(105,101,101,.6);
+}
+.site-category ul{
+  padding:20px 0;
+}
+.site-category ul li{
+  padding-left: 30px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff;
+  position: relative;
+}
+.site-category ul li:hover{
+  background-color: #ff6700;
+  cursor: pointer;
+}
+.site-category li i{
+  position: absolute;
+  right: 10px;
+}
+.swiper-bar .swiper-wrapper{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 460px;
+}
+.swiper-item img{
+  width: 1226px;
+}
+/* swiper end */
