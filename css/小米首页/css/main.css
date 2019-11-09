@@ -384,3 +384,117 @@ li{
 }
 
 /* hero-sub end */
+/* plain-box start */
+.plain-box .pb-top{
+  height: 58px;
+  line-height: 58px;
+}
+.plain-box{
+  background-color: #f5f5f5;
+  margin-top:15px;
+}
+.plain-box .pbt-left{
+ float: left;
+ font-size: 22px;
+ font-weight: 200;
+}
+.plain-box .pbt-right{
+  float: right;
+}
+.plain-box .pbt-right span{
+  border:1px solid #e0e0e0;
+  color: #b0b0b0;
+  padding: 0px 5px;
+  margin-left: -1px;
+}
+.pb-bottom .pbb-left{
+  width: 234px;
+  height: 340px;
+  float: left;
+  text-align: center;
+  background-color: #f1eded;
+  border-top: 1px solid #e53935
+}
+.pb-bottom .pbb-left .round{
+  font-size: 21px;
+  color: #ef3a3b;
+  padding-top: 15px;
+}
+.pb-bottom .pbb-left img{
+  margin: 25px auto;
+}
+.pb-bottom .pbb-left .round-info{
+  color: rgba(0,0,0,.54);
+  font-size: 15px;
+}
+.timer{
+  margin-top:35px;
+}
+.timer div{
+  width: 46px;
+  height: 46px;
+  background: #605751;
+  color: #fff;
+  font-size: 24px;
+  line-height: 46px;
+  display: inline-block;
+}
+.timer i{
+  width: 15px;
+  display: inline-block;
+  height: 46px;
+  line-height: 46px;
+  color: #605751;
+  font-size: 28px;
+  font-style: normal;
+}
+.pb-bottom .pbb-right{
+  width: 978px;
+  height: 340px;
+  float: left;
+  margin-left: 14px;
+}
+.pb-bottom .pbb-right li{
+  float: left;
+  width: 234px;
+  height: 340px;
+  background-color: #fff;
+  margin-right: 14px;
+  border-top:1px solid #ffac13;
+}
+.pb-bottom .pbb-right li:last-child{
+  margin-right: 0;
+}
+.pbb-right .img-bar{
+  width: 160px;
+  margin: 39px auto 22px;
+}
+.pbb-right .img-bar img{
+  width: 160px;
+}
+.pbb-right p{
+  margin: 0 20px 3px;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pbb-right .desc{
+  height: 18px;
+  margin-bottom:12px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+.price{
+  font-size: 14px;
+  text-align: center;
+  color: #b0b0b0;
+}
+.price span{
+  color: #ff6709;
+}
+/* plain-box end */
