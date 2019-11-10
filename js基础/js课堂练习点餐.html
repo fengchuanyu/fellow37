@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function chooseFood(){
+      var food = "";
+      var ran = parseInt(Math.random()*10);
+      switch(ran){
+        case 1:food = "宫保鸡丁";break;
+        case 2:food = "土豆丝";break;
+        case 3:food = "香辣肉丝";break;
+        case 4:food = "锅包肉";break;
+        case 5:food = "面条";break;
+        case 6:food = "馒头";break;
+        case 7:food = "包子";break;
+        case 8:food = "粥";break;
+        case 9:food = "凉菜";break;
+        default:food = "不吃了"
+      }
+      return food;
+    }
+
+
+
+    var isCon = confirm("是否选择晚餐？");
+    if(isCon){
+      var num = prompt("请输入用餐人数");
+      var nameList = [];
+      var foodList = [];
+      for(var i =0;i<num;i++){
+        var userName = prompt("请输入第"+(i+1)+"个的名字");
+        nameList.push(userName);
+      }      
+      for(var i=0;i<num;i++){
+        foodList.push(nameList[i]+"吃"+chooseFood());
+      }
+      console.log(foodList);
+    }else{
+      console.log("你点击了取消");
+    }
+    
+  </script>
+</body>
+</html>
