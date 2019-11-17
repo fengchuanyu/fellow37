@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ <!-- 
+   4.	编写程序，计算 1!+2!+3!+…..＋10！的结果。
+  -->
+ <script>
+    // var num = 1; 
+    // for(var i=1;i<11;i++){
+    //   // console.log(i);
+    //   num *= i;
+    // }
+    // console.log(num);
+
+
+      // 方法一
+      // var num = 1;
+      // var sum = 0;
+      // for(var i=1;i<11;i++){
+      //   num = 1;
+      //   for(var j=1;j<=i;j++){
+      //     num*=j
+      //   }
+      //   sum+=num;
+      // }
+      // console.log(sum);
+
+
+
+        // 方法二
+      function foo(n){
+        var num = 1; 
+        for(var i=1;i<=n;i++){
+          // console.log(i);
+          num *= i;
+        }
+        return num
+      }
+
+      var sum = 0;
+      for(var i=1;i<=10;i++){
+        sum+=foo(i)
+      }
+      console.log(sum);
+      
+
+
+      
+
+
+    
+ </script>
+</body>
+</html>

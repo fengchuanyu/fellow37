@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 1.	编写程序．通过用户输入的年龄判断是哪个年龄段的人（儿童：年龄＜14；青少年：14<=年龄＜24；青年：24<年龄＜40; 中年：40＜=年龄＜60; 老年：年龄>=60），并在页面上输出判断结果。 -->
+  <script>
+    var age = prompt("请输入年龄");
+    // console.log(typeof age);
+    if(age<14){
+      console.log("儿童");
+    }else if(14<=age && age<24){
+      console.log("青少年");
+    }else if(age>24 && age<40){
+      console.log("青年");
+    }else if(age>=40 && age<60){
+      console.log("中年");
+    }else if(age>60){
+      console.log("老年");
+    }
+
+  </script>
+</body>
+</html>
