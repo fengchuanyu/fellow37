@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 8.	设计一个函数DayOfYear(d)，它接收一个日期参数d，返回一个该日期是所在年份的第几天，如DayOfYear(2000,2,8)的返回值是39.
+（提示：①定义一个数组months=new Array（31,28,31,30,31,30,31,31,30,31，30,31）记录每个月少天：②定义一个辅助函数IsLeapYear(y)判定某个年份是否闰年，以确定2月份的天数是28还是29。）
+ -->
+  <script>
+    function IsLeapYear(y){
+      if(y%4==0&&y%100!=0||y%400==0){
+        return true;
+      }
+      return false;
+    }
+    function DayOfYear(y,m,d){
+      var count = 0;
+      var months=new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+      if(IsLeapYear(y)){
+        months[1] = 29;
+      }
+      for(var i=0;i<m-1;i++){
+        count+=months[i]
+      }
+      return count+=d
+    }
+    console.log(DayOfYear(2019,11,23));
+
+    // var timer = new Date(2019,11,0);
+    // console.log(timer.getDate());
+    
+    
+  </script>
+</body>
+</html>
