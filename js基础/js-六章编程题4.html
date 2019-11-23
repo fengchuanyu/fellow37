@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // if("1"==1){//隐式类型转换
+
+    // }
+    // var num = "1"
+    // if(num>=0 && num<10)
+    // if("1"===1){
+
+    // }
+
+    function CollectDigits(s){
+      var str = "";
+      for(var i=0;i<s.length;i++){
+        if(s.charAt(i)>=0 && s.charAt(i)<10){
+          str+=s.charAt(i);
+        }
+      }
+      return str;
+    }
+    console.log(CollectDigits("1abc23def4"));
+  </script>
+</body>
+</html>

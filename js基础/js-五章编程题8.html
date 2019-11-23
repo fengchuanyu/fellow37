@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+
+    8.	编写函数，用下面的公式计算π的近似值。
+   -->
+  <script>
+    function foo(n){
+      var sum = 0;
+      for(var i =1;i<=n;i++){
+        sum += Math.pow(-1,i-1)*(1/(2*i-1));
+      }
+      return sum*4
+    }
+    console.log(foo(100));
+    console.log(foo(500));
+    console.log(foo(1000));
+    console.log(foo(10000));
+    
+
+  </script>
+</body>
+</html>
