@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="list">
+    <li data-id="test" data-href="http://www.taobao.com">淘宝</li>
+    <li>百度</li>
+  </ul>
+  <ul>
+    <li>a</li>
+  </ul>
+  <script>
+     var aList = document.getElementById("list");
+     var aLi = aList.getElementsByTagName("li");
+     console.log(aLi);
+     aLi[0].onmouseover = function(e){
+       console.log(this.dataset)
+      //  window.location.href = this.dataset.href;
+     }
+  </script>
+</body>
+</html>
