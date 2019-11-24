@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box{
+      width: 100px;
+      height: 100px;
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    var oBox = document.getElementById("box");
+    oBox.onclick = function(){
+      oBox.style.width = "300px";
+      oBox.style.backgroundColor="red";
+    }
+  </script>
+</body>
+</html>
