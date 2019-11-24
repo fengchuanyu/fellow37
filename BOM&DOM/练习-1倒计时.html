@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      height: 300px;
+      width: 300px;
+      background-color: #ddd;
+      position: absolute;
+      left: 50%;
+      top:50%;
+      margin-top:-150px;
+      margin-left:-150px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1 id="num">100</h1>
+    <button id="btn">开始</button>
+  </div>
+  <script>
+    var oNum = document.getElementById("num");
+    var oBtn = document.getElementById("btn");
+    var isStop = true;
+    var timer = null;
+
+    // 按钮绑定事件
+    oBtn.onclick = function(){
+      isStop = !isStop;
+      console.log(isStop);
+      if(isStop){
+        clearInterval(timer);
+        oBtn.innerText = "开始";
+      }else{
+        timer = setInterval(function(){
+        --oNum.innerText
+        },1000)
+        oBtn.innerText = "暂停";
+      }
+    }
+
+  </script>
+</body>
+</html>
