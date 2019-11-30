@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    body{
+      background-color: #000;
+    }
+    li{
+      list-style: none;
+    }
+    .box{
+      border:5px solid white;
+      margin: 0 auto;
+      width: 490px;
+      height: 170px;
+      position: relative;
+    }
+    .swiper-img li{
+      position: absolute;
+      top:0;
+      left: 0;
+    }
+    .swiper-btn li{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #f90;
+      text-align: center;
+      line-height: 20px;
+      color: #fff;
+    }
+    .swiper-btn{
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      z-index: 101;
+    }
+    .right-btn{
+      float: right;
+      
+    }
+    .left-btn{
+      float: left;
+    }
+    .right-btn .active{
+      background-color: red;
+    }
+    .swiper-img .active{
+      z-index: 100;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="swiper-img">
+      <ul>
+        <li class="active">
+          <img src="./image/01.jpg" alt="">
+        </li>
+        <li >
+          <img src="./image/02.jpg" alt="">
+        </li>
+        <li >
+          <img src="./image/03.jpg" alt="">
+        </li>
+        <li>
+          <img src="./image/04.jpg" alt="">
+        </li>
+        <li>
+          <img src="./image/05.jpg" alt="">
+        </li>
+      </ul>
+    </div>
+    <div class="swiper-btn">
+      <div class="left-btn">
+        <ul>
+          <li>&lt;</li>
+          <li>&gt;</li>
+        </ul>
+      </div>
+      <div class="right-btn">
+        <ul>
+          <li class="active">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    var aBtn = document.getElementsByClassName("right-btn")[0].getElementsByTagName("li");
+    var aImg = document.getElementsByClassName("swiper-img")[0].getElementsByTagName("li");
+    for(var i=0;i<aBtn.length;i++){
+      aBtn[i].index = i;
+      aBtn[i].onmouseover= function(){
+        for(var j=0;j<aBtn.length;j++){
+          aBtn[j].className = "";
+          aImg[j].className = "";
+        }
+        this.className = "active"
+        aImg[this.index].className="active"
+      }
+    }
+  </script>
+</body>
+</html>
