@@ -101,19 +101,93 @@
     </div>
   </div>
   <script>
+    var arrBtn = document.getElementsByClassName("left-btn")[0].getElementsByTagName("li");
     var aBtn = document.getElementsByClassName("right-btn")[0].getElementsByTagName("li");
     var aImg = document.getElementsByClassName("swiper-img")[0].getElementsByTagName("li");
+    var nowIndex = 0;
+
+    //切换图片函数
+    function cheangeImg(index){
+      nowIndex = index;
+      for(var j=0;j<aBtn.length;j++){
+        aBtn[j].className = "";
+        aImg[j].className = "";
+      }
+      aBtn[index].className = "active";
+      aImg[index].className = "active";
+    }
+
+    //数字按钮循环绑定事件
     for(var i=0;i<aBtn.length;i++){
       aBtn[i].index = i;
-      aBtn[i].onmouseover= function(){
-        for(var j=0;j<aBtn.length;j++){
-          aBtn[j].className = "";
-          aImg[j].className = "";
-        }
-        this.className = "active"
-        aImg[this.index].className="active"
+      aBtn[i].onmouseover = function(){
+        cheangeImg(this.index)
       }
     }
+    //向下按钮绑定事件
+    arrBtn[1].onclick = function(){
+      ++nowIndex
+      if(nowIndex==5){
+        nowIndex = 0;
+      }
+      cheangeImg(nowIndex);
+    }
+    //向上按钮绑定事件
+    arrBtn[0].onclick = function(){
+      --nowIndex;
+      if(nowIndex == -1){
+        nowIndex = 4
+      }
+      cheangeImg(nowIndex)
+    }
+
+
+
+    // for(var i=0;i<aBtn.length;i++){
+    //   aBtn[i].index = i;
+    //   aBtn[i].onmouseover= function(){
+    //     for(var j=0;j<aBtn.length;j++){
+    //       aBtn[j].className = "";
+    //       aImg[j].className = "";
+    //     }
+    //     this.className = "active"
+    //     aImg[this.index].className="active"
+    //   }
+    // }
+
+
+    // arrBtn[1].onclick = function(){
+    //   ++nowIndex;
+    //   for(var j=0;j<aBtn.length;j++){
+    //     aBtn[j].className = "";
+    //     aImg[j].className = "";
+    //   }
+
+    //   if(nowIndex == 5){
+    //     nowIndex = 0
+    //   }
+
+    //   aBtn[nowIndex].className = "active";
+    //   aImg[nowIndex].className = "active";
+    // }
+
+    // arrBtn[0].onclick = function(){
+    //   --nowIndex;
+    //   for(var j=0;j<aBtn.length;j++){
+    //     aBtn[j].className = "";
+    //     aImg[j].className = "";
+    //   }
+
+    //   if(nowIndex == -1){
+    //     nowIndex = 4
+    //   }
+
+    //   aBtn[nowIndex].className = "active";
+    //   aImg[nowIndex].className = "active";
+    // }
+
+
+    
   </script>
 </body>
 </html>
