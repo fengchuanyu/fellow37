@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding:0;
+    }
+    li{
+      list-style: none;
+    }
+    .box{
+      width: 700px;
+      border:1px solid black;
+      margin:200px auto;
+    }
+    .tab-nav{
+      background-color: #000;
+      height: 50px;
+    }
+    .tab-nav li{
+      float: left;
+      width: 100px;
+      height: 50px;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+    }
+    .tc-item{
+      display: none;
+    }
+    .tab-content{
+      padding:30px;
+    }
+    .tab-content .active{
+      display: block;
+    }
+    .tab-nav .active{
+      background-color: #ddd;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="tab-nav">
+      <ul>
+        <li class="active">第一节课</li>
+        <li>第二节课</li>
+        <li>第三节课</li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <div class="tc-item active">
+        <ul>
+          <li>第一节课内容</li>
+          <li>第一节课内容</li>
+          <li>第一节课内容</li>
+        </ul>
+      </div>
+      <div class="tc-item">
+        <ul>
+          <li>第二节课内容</li>
+          <li>第二节课内容</li>
+          <li>第二节课内容</li>
+        </ul>
+      </div>
+      <div class="tc-item">
+        <ul>
+          <li>第三节课内容</li>
+          <li>第三节课内容</li>
+          <li>第三节课内容</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    var aItem = document.getElementsByClassName("tc-item");
+    var aNav = document.getElementsByClassName("tab-nav")[0].getElementsByTagName("li");
+    for(var i=0;i<aNav.length;i++){
+      aNav[i].index = i;
+      aNav[i].onmouseover = function(){
+        for(var j=0;j<aNav.length;j++){
+          aNav[j].className = "";
+          aItem[j].classList.remove("active");
+        }
+        this.className = "active";
+        aItem[this.index].classList.add("active");
+      }
+    }
+    
+
+  </script>
+</body>
+</html>
