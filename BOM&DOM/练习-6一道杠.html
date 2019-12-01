@@ -24,12 +24,12 @@
       timer = setInterval(function(){
         if(_this.offsetWidth >=500){
           clearInterval(timer)
+        }else{
+          _this.style.width = (_this.offsetWidth+10) + "px";
         }
         //setInterval 中的this 指向 window
         //style.width 设置值
         // offsetWidth 获取值
-        _this.style.width = (_this.offsetWidth+10) + "px";
-
       },16)
       
     }
@@ -40,8 +40,9 @@
       timer = setInterval(function(){
         if(_this.offsetWidth <=300){
           clearInterval(timer)
+        }else{
+          _this.style.width = (_this.offsetWidth-10) + "px";
         }
-        _this.style.width = (_this.offsetWidth-10) + "px";
       },16)
     }
   </script>
