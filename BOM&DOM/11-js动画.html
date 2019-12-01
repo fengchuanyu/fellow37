@@ -7,7 +7,7 @@
   <title>Document</title>
   <style>
     div{
-      width: 300px;
+      width: 500px;
       height: 100px;
       background-color: red;
     }
@@ -19,10 +19,8 @@
     var oBox = document.getElementById("box");
     oBox.onmouseover = function(){
       var _this = this;
-      var w = 300;
       setInterval(function(){
-        w+=10;
-        _this.style.width = w+"px";
+        _this.style.width = (_this.offsetWidth+10) +"px";
       },16)
     }
   </script>
