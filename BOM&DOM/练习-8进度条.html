@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 400px;
+      height: 50px;
+      border:1px solid black;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .inner{
+      background-color: blue;
+      width: 0;
+      height: 50px;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="inner">
+      <span id="inner-text">0</span>%
+    </div>
+  </div>
+  <button id="btn">start</button>
+  <script>
+    var oBtn = document.getElementById("btn");
+    var oInner = document.getElementsByClassName("inner")[0];
+    var oText = document.getElementById("inner-text");
+    var timer = null;
+    oBtn.onclick = function(){
+      timer = setInterval(function(){
+        if(oText.innerText == 100){
+          clearInterval(timer)
+        }else{
+          oInner.style.width = (oInner.offsetWidth+4)+"px";
+          ++oText.innerText
+        }
+      },16)
+    }
+  </script>
+</body>
+</html>
