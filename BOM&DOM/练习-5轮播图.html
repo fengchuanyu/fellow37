@@ -101,10 +101,12 @@
     </div>
   </div>
   <script>
+    var oBox = document.getElementsByClassName("box")[0];
     var arrBtn = document.getElementsByClassName("left-btn")[0].getElementsByTagName("li");
     var aBtn = document.getElementsByClassName("right-btn")[0].getElementsByTagName("li");
     var aImg = document.getElementsByClassName("swiper-img")[0].getElementsByTagName("li");
     var nowIndex = 0;
+    var timer = null;
 
     //切换图片函数
     function cheangeImg(index){
@@ -141,8 +143,34 @@
       cheangeImg(nowIndex)
     }
 
+    // 定时播放
+    // var timer = setInterval(function(){
+    //   ++nowIndex
+    //   if(nowIndex==5){
+    //     nowIndex = 0;
+    //   }
+    //   cheangeImg(nowIndex);
+    // },1000)
 
+    //图片播放
+    function play(){
+      timer = setInterval(function(){
+        ++nowIndex
+        if(nowIndex==5){
+          nowIndex = 0;
+        }
+        cheangeImg(nowIndex);
+      },1000)
+    }
 
+    oBox.onmouseover = function(){
+      clearInterval(timer)
+    }
+    
+    oBox.onmouseout = function(){
+      play()
+    }
+    play();
     // for(var i=0;i<aBtn.length;i++){
     //   aBtn[i].index = i;
     //   aBtn[i].onmouseover= function(){
