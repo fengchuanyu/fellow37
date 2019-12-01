@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 300px;
+      height: 50px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    var oBox = document.getElementsByClassName("box")[0];
+    var timer = null;
+    oBox.onmouseover = function(){
+      clearInterval(timer)
+      var _this = this;
+      timer = setInterval(function(){
+        if(_this.offsetWidth >=500){
+          clearInterval(timer)
+        }
+        //setInterval 中的this 指向 window
+        //style.width 设置值
+        // offsetWidth 获取值
+        _this.style.width = (_this.offsetWidth+10) + "px";
+
+      },16)
+      
+    }
+
+    oBox.onmouseout = function(){
+      clearInterval(timer)
+      var _this = this;
+      timer = setInterval(function(){
+        if(_this.offsetWidth <=300){
+          clearInterval(timer)
+        }
+        _this.style.width = (_this.offsetWidth-10) + "px";
+      },16)
+    }
+  </script>
+</body>
+</html>
