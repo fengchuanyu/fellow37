@@ -63,6 +63,9 @@
     .right-btn {
       float: right;
     }
+    .right-btn .active{
+      background-color: red;
+    }
   </style>
 </head>
 
@@ -96,7 +99,7 @@
       </div>
       <div class="right-btn">
         <ul>
-          <li>1</li>
+          <li class="active">1</li>
           <li>2</li>
           <li>3</li>
           <li>4</li>
@@ -108,17 +111,62 @@
   <script>
     var imgBox = document.getElementById("img-box");
     var leftBtn = document.getElementsByClassName("left-btn")[0].getElementsByTagName("li");
+    var numberBtn =document.getElementsByClassName("right-btn")[0].getElementsByTagName("li");
     var timer = null;
-    leftBtn[1].onclick = function () {
-      timer = setInterval(function () {
-        if(imgBox.offsetLeft==-490){
-          clearInterval(timer)
-        }else{
-          imgBox.style.left = imgBox.offsetLeft - 10 + "px";
-        }
-      }, 16)
-    }
+    var nowIndex = 0;
+    // leftBtn[1].onclick = function () {
+    //   timer = setInterval(function () {
+    //     if(imgBox.offsetLeft==-490){
+    //       clearInterval(timer)
+    //     }else{
+    //       imgBox.style.left = imgBox.offsetLeft - 10 + "px";
+    //     }
+    //   }, 16)
+    // }
+    //切换图片方法
+    function changeImg(index){
+      //正在运行中的动画停掉
+      clearInterval(timer);
+      //判断滚动方向
+      var direction = 0;
+      if(nowIndex > index){
+        direction = 1
+      }else{
+        direction = -1
+      }
 
+      //给数字按钮加选中状态
+      for(var j=0;j<numberBtn.length;j++){
+        numberBtn[j].className = ""
+      }
+      numberBtn[index].className = "active"
+
+      //开始滚动动画
+      timer = setInterval(function(){
+        if(imgBox.offsetLeft==-index*490){//判断停止条件
+          clearInterval(timer)
+          nowIndex = index;
+        }else{
+          imgBox.style.left = imgBox.offsetLeft + (10*direction) + "px";//开始动画
+        }
+      },16)
+      
+    }
+    //给数字按钮绑定时间
+    for(var i=0;i<numberBtn.length;i++){
+      numberBtn[i].index = i;
+      numberBtn[i].onclick=function(){
+        changeImg(this.index);
+      }
+    }
+    //上一张图片按钮
+    leftBtn[0].onclick = function (){
+      changeImg(nowIndex - 1);
+    }
+    //下一张图片按钮
+    leftBtn[1].onclick = function (){
+      changeImg(nowIndex + 1);
+    }
   </script>
 </body>
 
