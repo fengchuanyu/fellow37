@@ -200,11 +200,8 @@
     //定时播放函数
     function play() {
       timer2 = setInterval(function(){
-        if (nowIndex + 1 == 5) {
-          changeImg(0)
-        } else {
-          changeImg(nowIndex + 1);
-        }
+        // changeImg(nowIndex + 1);
+        leftBtn[1].onclick()
       }, 2000)
     }
     play()//默认状态下播放
