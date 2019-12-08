@@ -30,7 +30,7 @@
     }
 
     .img-bar ul {
-      width: 2450px;
+      width: 2940px;
       position: absolute;
     }
 
@@ -90,6 +90,9 @@
         <li>
           <img src="./image/05.jpg">
         </li>
+        <li>
+          <img src="./image/01.jpg">
+        </li>
       </ul>
     </div>
     <div class="btn-bar">
@@ -143,13 +146,21 @@
       for (var j = 0; j < numberBtn.length; j++) {
         numberBtn[j].className = ""
       }
-      numberBtn[index].className = "active"
-
+      if(index==5){
+        numberBtn[0].className = "active"
+      }else{
+        numberBtn[index].className = "active"
+      }
       //开始滚动动画
       timer = setInterval(function () {
         if (imgBox.offsetLeft == -index * 490) {//判断停止条件
           clearInterval(timer)
-          nowIndex = index;
+          if(index == 5){
+            imgBox.style.left = 0
+            nowIndex = 0;
+          }else{
+            nowIndex = index;
+          }
         } else {
           imgBox.style.left = imgBox.offsetLeft + (10 * direction) + "px";//开始动画
         }
@@ -166,6 +177,8 @@
     //上一张图片按钮
     leftBtn[0].onclick = function () {
       if (nowIndex - 1 == -1) {
+        imgBox.style.left = "-2450px";
+        nowIndex = 5
         changeImg(4)
       } else {
         changeImg(nowIndex - 1);
@@ -173,11 +186,7 @@
     }
     //下一张图片按钮
     leftBtn[1].onclick = function () {
-      if (nowIndex + 1 == 5) {
-        changeImg(0)
-      } else {
         changeImg(nowIndex + 1);
-      }
     }
 
     //当鼠标移入时停止定时播放
