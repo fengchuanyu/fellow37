@@ -7,11 +7,25 @@
   <title>Document</title>
 </head>
 <body>
-  <select multiple name="" id="">
+  <select multiple name="" id="sel">
     <option value="">a</option>
     <option value="">b</option>
     <option value="">c</option>
     <option value="">d</option>
   </select>
+  <button id="btn">test</button>
+  <script>
+    var sel = document.getElementById("sel")
+    var op = document.querySelectorAll("option");
+    var btn = document.querySelector("#btn");
+    btn.onclick = function(){
+      console.log(sel.selectedIndex);
+      console.log(sel.options);
+      
+      // for( var i=0;i<op.length;i++){
+      //   console.log(op[i].selected);
+      // }
+    }
+  </script>
 </body>
 </html>
