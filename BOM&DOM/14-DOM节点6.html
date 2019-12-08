@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="ul1">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ul>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li id="li3">3</li>
+  </ul>
+  <button id="btn">change</button>
+  <script>
+    var ul1= document.querySelector("#ul1");
+    var li3 = document.querySelector("#li3");
+    var btn = document.querySelector("#btn");
+    btn.onclick = function(){
+      ul1.appendChild(li3);
+    }
+  </script>
+</body>
+</html>
