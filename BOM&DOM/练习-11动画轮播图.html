@@ -26,6 +26,7 @@
       height: 170px;
       border: 5px solid white;
       position: relative;
+      overflow: hidden;
     }
 
     .img-bar ul {
@@ -63,7 +64,8 @@
     .right-btn {
       float: right;
     }
-    .right-btn .active{
+
+    .right-btn .active {
       background-color: red;
     }
   </style>
@@ -109,10 +111,12 @@
     </div>
   </div>
   <script>
+    var oBox = document.getElementsByClassName("box")[0];
     var imgBox = document.getElementById("img-box");
     var leftBtn = document.getElementsByClassName("left-btn")[0].getElementsByTagName("li");
-    var numberBtn =document.getElementsByClassName("right-btn")[0].getElementsByTagName("li");
+    var numberBtn = document.getElementsByClassName("right-btn")[0].getElementsByTagName("li");
     var timer = null;
+    var timer2 = null;
     var nowIndex = 0;
     // leftBtn[1].onclick = function () {
     //   timer = setInterval(function () {
@@ -124,49 +128,77 @@
     //   }, 16)
     // }
     //切换图片方法
-    function changeImg(index){
+    function changeImg(index) {
       //正在运行中的动画停掉
       clearInterval(timer);
       //判断滚动方向
       var direction = 0;
-      if(nowIndex > index){
+      if (nowIndex > index) {
         direction = 1
-      }else{
+      } else {
         direction = -1
       }
 
       //给数字按钮加选中状态
-      for(var j=0;j<numberBtn.length;j++){
+      for (var j = 0; j < numberBtn.length; j++) {
         numberBtn[j].className = ""
       }
       numberBtn[index].className = "active"
 
       //开始滚动动画
-      timer = setInterval(function(){
-        if(imgBox.offsetLeft==-index*490){//判断停止条件
+      timer = setInterval(function () {
+        if (imgBox.offsetLeft == -index * 490) {//判断停止条件
           clearInterval(timer)
           nowIndex = index;
-        }else{
-          imgBox.style.left = imgBox.offsetLeft + (10*direction) + "px";//开始动画
+        } else {
+          imgBox.style.left = imgBox.offsetLeft + (10 * direction) + "px";//开始动画
         }
-      },16)
-      
+      }, 16)
+
     }
     //给数字按钮绑定时间
-    for(var i=0;i<numberBtn.length;i++){
+    for (var i = 0; i < numberBtn.length; i++) {
       numberBtn[i].index = i;
-      numberBtn[i].onclick=function(){
+      numberBtn[i].onclick = function () {
         changeImg(this.index);
       }
     }
     //上一张图片按钮
-    leftBtn[0].onclick = function (){
-      changeImg(nowIndex - 1);
+    leftBtn[0].onclick = function () {
+      if (nowIndex - 1 == -1) {
+        changeImg(4)
+      } else {
+        changeImg(nowIndex - 1);
+      }
     }
     //下一张图片按钮
-    leftBtn[1].onclick = function (){
-      changeImg(nowIndex + 1);
+    leftBtn[1].onclick = function () {
+      if (nowIndex + 1 == 5) {
+        changeImg(0)
+      } else {
+        changeImg(nowIndex + 1);
+      }
     }
+
+    //当鼠标移入时停止定时播放
+    oBox.onmouseover = function () {
+      clearInterval(timer2)
+    }
+    //当鼠标移出的时候开始定时播放
+    oBox.onmouseout = function () {
+      play()
+    }
+    //定时播放函数
+    function play() {
+      timer2 = setInterval(() => {
+        if (nowIndex + 1 == 5) {
+          changeImg(0)
+        } else {
+          changeImg(nowIndex + 1);
+        }
+      }, 2000)
+    }
+    play()//默认状态下播放
   </script>
 </body>
 
