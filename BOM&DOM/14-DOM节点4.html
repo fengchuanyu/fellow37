@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">
+    <div class="div0">div0</div>
+    <div class="div1">div1</div>
+    <div class="div2">div2</div>
+  </div>
+  <script>
+    var oBox= document.querySelector(".box");
+    var div0 = document.querySelector(".div0");
+    var div1 = document.querySelector(".div1");
+    oBox.insertBefore(div1,div0)
+  </script>
+</body>
+</html>

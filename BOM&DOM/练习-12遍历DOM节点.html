@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
   <script>
-    function foo(){
-      
+    window.onload = function () {//当前页面内所有资源都加载完成时候执行
+      function foo(nodes) {
+        if (nodes.nodeType == 1) {
+          console.log(nodes.nodeName);
+        }
+        if (nodes.hasChildNodes()) {
+          for (var i = 0; i < nodes.childNodes.length; i++) {
+            if (nodes.childNodes[i].nodeType == 1) {
+              foo(nodes.childNodes[i])
+            }
+          }
+        }
+      }
+      foo(document)
     }
-    foo(document)
+
   </script>
+  <div>
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+
 </body>
+
 </html>
