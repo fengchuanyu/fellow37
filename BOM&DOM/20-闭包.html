@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function foo(){
+    //   var str = "hello"
+    //   function foo2(){
+    //     console.log(str);
+    //   }
+    //   foo2()
+    // }
+
+    // foo();
+    /*
+          闭包是指外部函数里声明内部函数，内部函数引用外部函数里的局部变量，这样当外部函数调用完毕以后，局部变量不被释放，可以一直使用。
+    */
+    // function f1() {
+    //   var n = 999;
+    //   function f2() {
+    //     console.log(n);
+    //   }
+    //   return f2;
+    // }
+    // var result = f1();
+    // result(); // 999
+    // result(); // 999
+    // result(); // 999
+    // // console.log(result)
+
+
+
+
+    // function foo(){
+    //   console.log("foo");
+
+    // }
+    // console.log(foo);
+
+    //闭包容易造成内存溢出
+    //     function f1(){
+    // 　　　　var n=999;
+    // 　　　　nAdd=function(){n+=1}
+    // 　　　　function f2(){
+    // 　　　　　　alert(n);
+    // 　　　　}
+    // 　　　　return f2;
+    // 　　}
+
+    // 　　var result=f1();
+    // 　　result(); // 999
+    // 　　nAdd();
+    // 　　result(); // 1000
+
+    // var name = "The Window";
+    // var object = {
+    //   name: "My Object",
+    //   getNameFunc: function () {
+    //     // console.log(this.name)
+    //     return function () {
+    //       return this.name;
+    //     };
+    //   }
+    // };
+    // // object.getNameFunc();
+    // console.log(object.getNameFunc()());
+    // var a = object.getNameFunc();
+    // console.log(window.a())
+
+    // function foo(){
+    //   return function(){
+    //     console.log("hello")
+    //   }
+    // }
+    // // var a = foo()
+    // // a();
+
+    // foo()();
+
+
+    var name = "The Window";
+    var object = {
+      name: "My Object",
+      getNameFunc: function () {
+        var that = this;
+        return function () {
+          return that.name;
+        };
+      }
+    };
+    // object.getNameFunc();
+    console.log(object.getNameFunc()());
+  </script>
+</body>
+
+</html>

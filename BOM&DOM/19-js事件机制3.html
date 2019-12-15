@@ -19,10 +19,29 @@
     var aLi = document.getElementsByTagName("li");
     for(var i=0;i<aLi.length;i++){
       // aLi[i].index = i;
-      aLi[i].onclick = function(){
-        // console.log(this.index);
-      }
+      (function(index){
+        aLi[i].onclick = function(){
+          // console.log(this.index);
+          console.log(index);
+        }
+      })(i)
     }
+
+    // function foo(){
+    //   //
+    // }
+    // var foo = function(){
+
+    // }
+    // (function(){ //立即执行函数
+    //   console.log("123")
+    // })()
+
+    // (function(){
+    //   var a = 10;
+    // })()
+    // console.log(a);
+    
   </script>
 </body>
 </html>
