@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div.centent {
+      float: left;
+      text-align: center;
+      margin: 10px;
+    }
+
+    span {
+      display: block;
+      margin: 2px 2px;
+      padding: 4px 10px;
+      background: #898989;
+      cursor: pointer;
+      font-size: 12px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="centent">
+    <select multiple="multiple" id="select1" style="width:100px;height:160px;">
+      <option value="1">选项1</option>
+      <option value="2">选项2</option>
+      <option value="3">选项3</option>
+      <option value="4">选项4</option>
+      <option value="5">选项5</option>
+      <option value="6">选项6</option>
+      <option value="7">选项7</option>
+    </select>
+    <div>
+      <span id="add">选中添加到右边&gt;&gt;</span>
+      <span id="add_all">全部添加到右边&gt;&gt;</span>
+    </div>
+  </div>
+
+  <div class="centent">
+    <select multiple="multiple" id="select2" style="width: 100px;height:160px;">
+      <option value="8">选项8</option>
+    </select>
+    <div>
+      <span id="remove">&lt;&lt;选中删除到左边</span>
+      <span id="remove_all">&lt;&lt;全部删除到左边</span>
+    </div>
+  </div>
+  <script>
+    var sel1 = document.getElementById("select1");
+    var sel2 = document.getElementById("select2");
+    // var sel1Option = document.getElementById("select1").getElementsByTagName("option");
+    // var sel2Option = document.getElementById("select2").getElementsByTagName("option");
+    var addBtn = document.getElementById("add");
+    var removeBtn = document.getElementById("remove");
+    var addAllBtn = document.getElementById("add_all");
+    var removeAllBtn = document.getElementById("remove_all");
+    var selectedDom = document.createDocumentFragment();
+    //错误实例
+    // for(var i=0;i<sel1Option.length;i++){
+    //   sel1Option[i].ondblclick = function(){
+    //     sel2.appendChild(this);
+    //   }
+    // }
+    // for(var i=0;i<sel2Option.length;i++){
+    //   sel2Option[i].ondblclick = function(){
+    //     sel1.appendChild(this);
+    //   }
+    // }
+
+
+      //左侧selected 双击事件
+      sel1.ondblclick = function(){
+        // console.log(this.selectedIndex)
+        // console.log(this.options[this.selectedIndex])
+        var thisOption = this.options[this.selectedIndex]
+        sel2.appendChild(thisOption)
+      }
+      //右侧selected 双击事件
+      sel2.ondblclick = function(){
+        var thisOption = this.options[this.selectedIndex]
+        sel1.appendChild(thisOption)
+      }
+
+      //左侧selected选中项移动
+      addBtn.onclick = function(){
+        var domArr = [];
+        for(var i=0;i<sel1.options.length;i++){
+          // console.log(sel1.options[i].selected);
+          if(sel1.options[i].selected){
+            // sel2.appendChild(sel1.options[i])
+            // selectedDom.appendChild(sel1.options[i])
+            domArr.push(sel1.options[i])
+          }
+        }
+        for(var j=0;j<domArr.length;j++){
+          sel2.appendChild(domArr[j]);
+        }
+      }
+
+      //右侧selected选中项移动
+      removeBtn.onclick = function(){
+        var domArr = [];
+        for(var i=0;i<sel2.options.length;i++){
+          if(sel2.options[i].selected){
+            domArr.push(sel2.options[i])
+          }
+        }
+        for(var j=0;j<domArr.length;j++){
+          sel1.appendChild(domArr[j]);
+        }
+      }
+
+      //左侧selected全部项移动
+      addAllBtn.onclick = function(){
+        var domArr = [];
+        for(var i=0;i<sel1.options.length;i++){
+          domArr.push(sel1.options[i])
+        }
+        for(var j=0;j<domArr.length;j++){
+          sel2.appendChild(domArr[j]);
+        }
+      }
+
+        //右侧selected全部项移动
+        removeAllBtn.onclick = function(){
+        var domArr = [];
+        for(var i=0;i<sel2.options.length;i++){
+          domArr.push(sel2.options[i])
+        }
+        for(var j=0;j<domArr.length;j++){
+          sel1.appendChild(domArr[j]);
+        }
+      }
+
+
+  </script>
+</body>
+</html>
