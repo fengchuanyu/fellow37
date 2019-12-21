@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+   
+  </style>
+</head>
+<body>
+    <div id="one-test" class="a-1 aa">hello</div>
+    <div id="two-test" class="b-1 bb">world</div>
+    <div id="one-div" class="a-11 cc">divOne</div>
+  <script>
+    // $("#test-one,#div-one").css({color:"red"})
+    // $("[id|=one]").css({color:"red"})
+    // $("[class*=a]").css({color:"red"})
+    // $("[class~=aa]").css({color:"red"})
+    $("[class$=a]").css({color:"red"})
+  </script>
+</body>
+</html>
