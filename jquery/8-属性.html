@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    .active{
+      color: red
+    }
+  </style>
+</head>
+<body>
+    <div class="box div1">hello</div>
+    <button id="btn">add</button>
+  <script>
+    $("#btn").click(function(){
+      $(".box").addClass("active")
+      $(".box").removeClass("div1");
+    })
+  </script>
+</body>
+</html>

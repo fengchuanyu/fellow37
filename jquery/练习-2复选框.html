@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+    <h1>你爱好的运动是？</h1>
+    <form>
+      <input type="checkbox" name="hobby" value="1">足球
+      <input type="checkbox" name="hobby" value="2">排球
+      <input type="checkbox" name="hobby" value="3">篮球
+      <input type="checkbox" name="hobby" value="4">羽毛球
+      <br>
+      <button id="all" type="button">全选</button>
+      <button id="no" type="button">全不选</button>
+      <button id="reverse" type="button">反选</button>
+    </form>
+ <script>
+   $("#all").click(function(){
+     $(":checkbox").prop("checked",true)
+   })
+   $("#no").click(function(){
+    $(":checkbox").prop("checked",false)
+   })
+
+   $("#reverse").click(function(){
+    var aCheckbox = $(":checkbox");
+    aCheckbox.each(function(index,item){
+      if($(item).prop("checked")){
+        $(item).prop("checked",false)
+      }else{
+        $(item).prop("checked",true)
+      }
+    })
+   })
+   
+
+  // var arr = [2,3,4,5,6]
+  //   arr.forEach(function(item){
+  //     console.log(item)
+  //   })
+ </script>
+</body>
+
+</html>
