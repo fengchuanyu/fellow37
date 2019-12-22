@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    // const repeatfunc = repeat(console.log,5,500);
+    // repeatfunc('hello,wrold');
+    //每隔500毫秒输出一个hello,world 输出5次
+   -->
+  <script>
+    function repeat(fun,count,timer){
+      return function(str){
+        var thisCount = 0;
+        var sTimer = null;
+        sTimer = setInterval(function(){
+          if(thisCount==count){
+            clearInterval(sTimer)
+          }else{
+            fun(str)
+            thisCount++
+          }
+        },timer)
+      }
+    }
+  var repeatfunc = repeat(console.log,5,1000);
+  repeatfunc('hello,wrold');
+  </script>
+</body>
+</html>
