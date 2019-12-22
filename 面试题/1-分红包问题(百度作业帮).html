@@ -9,7 +9,22 @@
 <body>
   <!-- // 发一个随机红包，100块钱给10个人。每个人最少分5元。怎么分？(作业帮) -->
   <script>
+    function foo(){
+      var num = 10;
+      var sum = 100 - 5*num;
+      var result = [];
+      for(var i=0;i<num;i++){
+        var ran = Math.floor(Math.random()*(sum+1)) 
+        result.push(ran+5);
+        sum = sum-ran;
+      }
+      return result
+    }
+
+    console.log(foo());
+
+    // Math.random()*51
     
-  </script>
+</script>
 </body>
 </html>

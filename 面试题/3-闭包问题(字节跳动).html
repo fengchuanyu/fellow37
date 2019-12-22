@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    console.log(sum(2,3))//5
+    console.log(sum(2)(3))//5
+   -->
+  <script>
+    function sum(x,y){
+      if(arguments.length==2){
+        return x+y
+      }else if(arguments.length == 1){
+        return function(z){
+          return x+z
+        }
+      }
+    }
+    // console.log(sum(2,3));
+    console.log(sum(2)(3));
+    
+
+
+    // function foo(){
+    //   // var a = 10
+    //   // console.log(arguments)
+    //   function foo2(){
+    //     console.log("foo2")
+    //   }
+    //   return foo2
+    //   // return a
+    // }
+    // console.log(foo()())
+    // // foo(2,3);
+  </script>
+</body>
+</html>
