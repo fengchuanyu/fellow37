@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li class="third-item">list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+        <li class="test">list item 6</li>
+        <li>list item 7</li>
+     </ul>
+
+  <script>
+    // $('.third-item').next().css('background-color', 'red');
+    // $('.third-item').nextAll().css('background-color', 'red');
+    // $('.third-item').nextUntil(".test").css('background-color', 'red');
+    $('.third-item').prevAll().css('background-color', 'red');
+  </script>
+</body>
+
+</html>

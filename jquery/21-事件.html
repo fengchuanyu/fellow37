@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li class="third-item">list item 3</li>
+      <li>list item 4</li>
+      <li>list item 5</li>
+      <li class="test">list item 6</li>
+      <li>list item 7</li>
+    </ul>
+    <button id="addBtn">add</button>
+  <script>
+    // var oUl = document.getElementsByTagName("ul")[0];
+    // var oBtn = document.getElementById("addBtn");
+    // oBtn.onclick = function(){
+    //   var oLi = document.createElement("li");
+    //   oLi.innerText = "hello";
+    //   oUl.appendChild(oLi)
+    // }
+    // oUl.onclick = function(e){
+    //   console.log(e.target);
+      
+    // }
+
+
+
+    // $("li").on("click",function(){
+      
+    //   console.log($(this).index());
+      
+    // })
+    $("#addBtn").on("click",function(){
+      $("ul").append("<li>hello</li>")
+    })
+    $("ul").on("click","li",function(){
+      // console.log($(e.target).index())
+      console.log($(this))
+    })
+  </script>
+</body>
+
+</html>
