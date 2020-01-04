@@ -36,7 +36,16 @@
     </tbody>
   </table>
   <script>
-    
+    $(".parent").on("click",function(){
+      // var thisId = $(this).attr("id")
+      // console.log(thisId);
+      // console.log(this.id);
+      // $(this).toggleClass("selected")
+      // $("tr[class*="+this.id+"]").toggleClass("is-show");
+
+      // $(this).toggleClass("selected").siblings("[class*="+this.id+"]").toggleClass("is-show");
+      $(this).toggleClass("selected").nextUntil(".parent").toggleClass("is-show");
+    })
   </script>
 </body>
 </html>
