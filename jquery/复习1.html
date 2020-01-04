@@ -6,14 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    .active{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
 </head>
 <body>
-  <div id="box"></div>
+  <div id="box" class="active"></div>
+  <button id="btn">change</button>
   <script>
-    var oBox = document.getElementById("box");
-    oBox.style.height = "200px";
-    oBox.style.width = "200px";
-    oBox.style.backgroundColor = "red";
+    $("#btn").on("click",function(){
+      $("#box").toggleClass("active");
+    })
+    // var oBox = document.getElementById("box");
+    // oBox.style.height = "200px";
+    // oBox.style.width = "200px";
+    // oBox.style.backgroundColor = "red";
     // $("#box").css({
     //   width:"200px",
     //   height:"200px",
