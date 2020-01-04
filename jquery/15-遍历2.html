@@ -24,9 +24,12 @@
 
   <script>
     // $(".active").siblings().css("background-color","red");
-    $("li").mouseover(function(){
-      console.log($(this).index())
-    })
+    // $("li").mouseover(function(){
+    //   console.log($(this).index())
+    // })
+    $( "li" ).map(function( index ) {
+  console.log( index + ": " + $(this).text() );
+});
   </script>
 </body>
 

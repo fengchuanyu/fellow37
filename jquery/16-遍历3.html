@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li class="active">list item 3
+      <div>
+        1
+        <div class="test">
+          2
+        </div>
+      </div>
+    </li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+  </ul>
+  
+
+  <script>
+    $("ul").find(".test").css({backgroundColor:"red"}).end().css({backgroundColor:"blue"});
+
+    // $(".active").siblings().end().text("hello world").css({backgroundColor:"red"})
+    // $(".active").text("hello world");
+
+
+
+
+  //  $(".active").css("background-color","red");
+  // $(".active").css({backgroundColor:"red"});
+  // $("ul li").eq(3).css({backgroundColor:"red"});
+  // $(".active2").css({backgroundColor:"red"});
+
+  // $(".active").add($("ul li").eq(3)).css({backgroundColor:"red"});
+  
+  // console.log($("ul").contents())
+  // $("li").each(function(index,element){
+  //   console.log(index,element)
+  // })
+  
+  </script>
+</body>
+
+</html>
