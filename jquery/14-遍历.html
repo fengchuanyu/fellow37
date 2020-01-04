@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>list item 1</li>
+    <li>list item 2
+      <ul>
+        <li>list item 2-a</li>
+        <li>list item 2-b</li>
+      </ul>
+    </li>
+    <li class="active">list item 3</li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+  </ul>
+
+  <script>
+    // $("li:eq(2)").css()
+    // $('li').eq(2).css('background-color', 'red');
+
+    // $('li').filter(':even').css('background-color', 'red');
+    // $('li').first(':even').css('background-color', 'red');
+    // $('li').has('ul').css('background-color', 'red');
+    // $('li').is('.active')
+
+    // console.log($('li').eq(2).is('.active'));
+    
+    // var $li = $("li");
+    // for(var i=0;i<$li.length;i++){
+    //   if($li.eq(i).is(".active")){
+    //     console.log($li.eq(i));
+        
+    //   }
+    // }
+    $('li').not(':even').css('background-color', 'red')
+  </script>
+</body>
+
+</html>

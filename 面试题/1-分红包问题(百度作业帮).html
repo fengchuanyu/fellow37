@@ -8,7 +8,38 @@
 </head>
 <body>
   <!-- // 发一个随机红包，100块钱给10个人。每个人最少分5元。怎么分？(作业帮) -->
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <script>
+      var arr = [];
+      var sum = 0;
+  for(var i=0;i<10;i++)
+  {
+    arr[i]=5;
+  }
+  for(var i=0;i<10;i++)
+  {
+    var power=50-sum+1;
+    arr[i]+=Math.random()*power;
+    sum+=arr[i];
+    if (sum>100)
+      break;
+  }
+  
+  
+  
     function foo(){
       var num = 10;
       var sum = 100 - 5*num;
