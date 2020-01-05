@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+    <div id="box">
+        <button id="btn">按钮</button>
+    </div>
+  <script>
+    var oBtn = document.getElementById("btn");
+
+    function foo(){
+      console.log("hello")
+    }
+    // oBtn.addEventListener("click",foo)
+    // oBtn.removeEventListener("click",foo)
+
+    $("#btn").on("click",foo);
+    $("#box").on("click",function(){
+      console.log("box")
+    })
+    // $("#btn").off("click",foo);
+    
+    // $("#btn").one("click",foo);
+    $("#btn").triggerHandler("click")
+    // obj = {}
+    // {} =={}
+    // [1] == [1]
+
+    // //string number boolean undefind null
+    // //Array Object function
+    // var str ="hello"
+
+    // var arr = [1,2,3,4];
+    // var arr2 = arr;
+    // arr[0]="a";
+    // console.log(arr2);
+    
+  </script>
+</body>
+
+</html>
