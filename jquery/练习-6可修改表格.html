@@ -56,8 +56,26 @@
     </tbody>
   </table>
   <script>
-   
-   
+  $(".editable").on("click",function(){
+    if($(this).children().length<1){
+      var thisText = $(this).text();
+      var $input = $("<input type='text'>");
+      $input.val(thisText);
+      $(this).text("").append($input);
+      $input.focus();
+    }
+  });
+  $(".editable").on("blur","input",function(){
+    var thisVal = $(this).val();
+    $(this).replaceWith(thisVal)
+  })
+
+  $(".editable").on("keyup","input",function(e){
+    if(e.keyCode == 13){
+      $(this).trigger("blur")
+    }
+  })
+
   </script>
 </body>
 </html>
