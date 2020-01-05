@@ -65,14 +65,16 @@
       $input.focus();
     }
   });
-  $(".editable").on("blur","input",function(){
-    var thisVal = $(this).val();
-    $(this).replaceWith(thisVal)
+  $(".editable").on("focusout",function(){
+    // var thisVal = $(this).val();
+    // $(this).replaceWith(thisVal)
+    var thisVal = $(this).find(":input").val();
+    $(this).text(thisVal);
   })
 
-  $(".editable").on("keyup","input",function(e){
+  $(".editable").on("keydown",function(e){
     if(e.keyCode == 13){
-      $(this).trigger("blur")
+      $(this).trigger("focusout")
     }
   })
 

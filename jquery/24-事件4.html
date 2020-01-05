@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    #box2{
+      height: 200px;
+      width: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="box">
+      <input type="text" id="inp">
+    </div>
+    <div id="box2"></div>
+  <script>
+    // $("#box").on("focusout",function(){
+    //   console.log("com")
+    // })
+    // $("#box").on("focusin",function(){
+    //   console.log("com")
+    // })
+
+    $("#box2").hover(function(){
+      console.log("123");
+    },function(){
+      console.log("abc")
+    })
+    
+  </script>
+</body>
+
+</html>
