@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    // var obj = {
+    //   name:"xiaoming",
+    //   age:30
+    // }
+    // var obj2 = {
+    //   age:20
+    // }
+    
+    // $.extend(obj,obj2);
+
+    // console.log(obj)
+
+    $.fn.extend({
+      fellow:function(obj){
+        var defaultInfo = {
+          name:"xiaoming",
+          age:"20"
+        }
+        $.extend(defaultInfo,obj)
+        $(this).html(
+          "<h1>姓名："+defaultInfo.name+"</h1>"+
+          "<h1>年龄："+defaultInfo.age+"</h1>"
+        )
+      }
+    })
+    
+
+    $("#box").fellow({age:"18"});
+
+  </script>
+</body>
+
+</html>
