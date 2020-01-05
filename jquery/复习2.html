@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div id="box">abc</div>
+  <script>
+    // var oBox = document.getElementById("box");
+    // var a = 10;
+    // // oBox.innerText = "hello world!"
+    // // oBox.innerHTML = "<h1>hello"+a+"</h1>"
+    // var oH1 = document.createElement("h1");
+    // oH1.innerText = "hello"+a;
+    // oBox.append(oH1);
+
+    
+    // console.log($("#box").text())
+    // $("#box").text("hello")
+    // $("#box").html("<h1>hello</h1>")
+    var $h1 = $("<h1></h1>");
+    $h1.text("hello");
+    $("#box").append($h1);
+  </script>
+</body>
+</html>
