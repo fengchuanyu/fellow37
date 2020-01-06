@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <input type="text" id="inp">
+  <div id="info"></div>
+  <script>
+    $("#inp").on("keyup",function(){
+      var thisVal = $(this).val();
+      var infoText = "可用"
+      $.get("https://api.myjson.com/bins/l8pz0",function(res){
+        var names = res.name;
+        for(var i=0;i<names.length;i++){
+          if(names[i]== thisVal){
+            infoText = "不可用";
+          }
+        }
+        $("#info").text(infoText)
+      })
+    })
+
+
+
+
+
+
+
+
+    // $("#inp").on("keyup",function(){
+    //   var thisVal = $(this).val();
+    //   //第一步创建 XMLHttpRequest 对象
+    //   var xmlhttp;
+    //   if (window.XMLHttpRequest) {
+    //     //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+    //     xmlhttp = new XMLHttpRequest();
+    //   }
+    //   else {
+    //     // IE6, IE5 浏览器执行代码
+    //     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    //   }
+    //   //第二部向服务器发送请求
+    //   xmlhttp.open("GET", "https://api.myjson.com/bins/l8pz0", true);
+    //   xmlhttp.send();
+    //   //第三步响应返回结果
+    //   xmlhttp.onreadystatechange = function () {
+    //     var infoText = "可用";
+    //     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    //       var res = JSON.parse(xmlhttp.responseText).name
+    //       for(var i=0;i<res.length;i++){
+    //         if(res[i]==thisVal){
+    //           infoText = "不可用"
+    //         }
+    //       }
+    //       $("#info").text(infoText);
+    //     }
+    //   }
+    // })
+  </script>
+</body>
+</html>
