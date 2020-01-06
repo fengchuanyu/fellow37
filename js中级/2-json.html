@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var obj = {
+      name:["test1","test2","test3"]
+    }  
+
+    console.log(obj)
+    var jsonStr = JSON.stringify(obj);
+    console.log(jsonStr)
+    var jsonObj = JSON.parse(jsonStr);
+    console.log(jsonObj);
+  </script>
+</body>
+</html>
