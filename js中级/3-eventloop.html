@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //  var a = 10;
+  //  alert(a);
+  //  console.log(a);
+  
+
+  //event loop 事件循环
+  // 主线程  任务队列
+  // 定时函数 ajax 异步任务
+    // var a = 10;
+    // setTimeout(function(){
+    //   console.log("hello")
+    // },1000)
+    // console.log(a)
+
+    // var a = 10;
+    // setTimeout(function(){
+    //   console.log("hello")
+    // },0)
+    // console.log(a)
+
+
+    // function foo2(str){
+    //   setTimeout(function(){
+    //     console.log(str)
+    //   },1000)
+    // }
+    // function foo(str,fun){
+    //   fun(str);
+    // }
+
+    function foo(str,fun){
+      setTimeout(function(){
+        fun()
+      },1000)
+    }
+
+    foo("hello world",function(){
+      console.log("hello")
+    });
+
+  </script>
+  <div>hello</div>
+</body>
+</html>

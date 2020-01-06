@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var a = 10;
+    // function foo2() {
+    //   // var a = 30;
+    //   function foo() {
+    //     console.log(a)
+    //   }
+    //   foo()
+    // }
+    // foo2()
+    // var a
+    // a= 10;
+    // function foo(){
+    //   var a
+    //   console.log(a)
+    //   a = 20;
+    // }
+    // foo()
+    // function foo(){
+    //   console.log("abc");
+    // }
+    // foo();
+
+    // var a
+    // function a(){
+    //   console.log(11);
+    // }
+    // console.log(a);
+    // a = 10;
+
+    // var a
+    // console.log(a);
+    // a = function(){
+    //   return a=10
+    // }
+
+    // function a(){
+
+    // }
+    
+      
+
+    // var a
+    // console.log(a);
+    // a = 10;
+
+
+    //执行上下文 context
+    // console.log(this);  
+    // function foo(){
+    //   console.log(this);
+    // }
+    // window.foo();
+    // var a = 10;
+    // window.a
+
+    var name = "aaaaa"
+    var obj = {
+      name:"bbbb",
+      showName:function(){
+        var _this = this;
+        return function(){
+          console.log(_this.name)
+        }
+      }
+    }
+    obj.showName()();
+    $("#div").click(function(){
+      this
+    })
+  </script>
+</body>
+
+</html>
