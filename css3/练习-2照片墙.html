@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding:0;
+    }
+    body{
+      perspective: 1000px;
+      perspective-origin: bottom center;
+    }
+    .box{
+      width: 400px;
+      height: 400px;
+      border:1px dashed black;
+      margin:100px auto;
+      transform-style: preserve-3d;
+    }
+    img{
+      transition: all 1s  ease;
+    }
+    img:first-child{
+      transform: rotate(30deg);
+    }
+    img:last-child{
+      transform: rotate(-30deg);
+    }
+    img:hover{
+      transform: translateZ(400px);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="./img/img01.jpg" alt="">
+    <img src="./img/img02.jpg" alt="">
+  </div>
+</body>
+</html>
