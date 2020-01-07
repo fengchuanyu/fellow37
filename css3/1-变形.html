@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 400px;
+      height: 400px;
+      border:1px dashed black;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+    .div1{
+      background-color: red;
+      /* transform: translateY(100%); */
+      /* position: absolute;
+      left: 50%;
+      top:50%; */
+     
+      transform: translate(-50%,-50%);
+      /* margin-top:-100px;
+      margin-left:-100px; */
+      transform:translateZ(100px);
+    }
+    .div2{
+      transform: translate(-50%,-50%);
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+      <span class="div1">hello world<br/>hello<br/>hello<br/>hello</span>
+      <span class="div2">hello fellow37</span>
+    </div>
+  
+</body>
+</html>
