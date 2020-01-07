@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var num = 1;
+    var str = "hello";
+    
+    console.log(str.__proto__)
+    String.prototype.fellow = function(){
+      console.log("fellow37")
+    }
+
+    Function.prototype.bind2 =function(){
+      
+    }
+
+
+
+    str.fellow();
+
+    // console.log(String.prototype);
+    // console.log(num.constructor==Number)
+  </script>
+</body>
+</html>
