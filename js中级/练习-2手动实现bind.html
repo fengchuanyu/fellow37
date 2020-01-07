@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      // Function.prototype.bind2 = function(str){
+      //   var _this = this
+      //   return function(){
+      //     _this.apply(str)
+      //   }
+      // }
+
+      // function foo(str){
+      //   console.log(this.name+str);
+      // }
+      // var obj = {
+      //   name:"xiaoming"
+      // }
+      // var foo2 =  foo.bind2(obj);
+      // foo2()
+
+
+      Function.prototype.bind2 = function(){
+        var thisObj = arguments[0]
+        var thisPra = Array.prototype.splice.call(arguments,1);
+        // var thisPra = arguments.splice(1)
+        // console.log(Array.isArray(arguments));
+        var _this = this
+        return function(){
+          _this.apply(thisObj,thisPra)
+        }
+      }
+
+      function foo(str,str2){
+        console.log(this.name+str+str2);
+      }
+      var obj = {
+        name:"xiaoming"
+      }
+      var foo2 =  foo.bind2(obj,"hello","world");
+      foo2()
+  </script>
+</body>
+</html>
