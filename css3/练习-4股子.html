@@ -28,6 +28,72 @@
       box-shadow: inset 0 3px #111, inset 0 -3px #555;
     }
 
+    .face1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .face2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .face2 span:nth-child(2) {
+      align-self: flex-end;
+    }
+
+    .face3 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .face3 span:nth-child(2) {
+      align-self: center
+    }
+
+    .face3 span:nth-child(3) {
+      align-self: flex-end;
+    }
+
+    .face4 {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    .face4 .clum {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .face5 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .face5 .clum:nth-child(2) {
+      /* width: 100%; */
+      flex-basis: 100%;
+      justify-content: center;
+    }
+
+    .face5 .clum {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .face6{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+    .face6 .clum{
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
   </style>
 </head>
 
@@ -37,7 +103,58 @@
     <span></span>
   </div>
 
-  
+  <div class="face face2">
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="face face3">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="face face4">
+    <div class="clum">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="clum">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="face face5">
+    <div class="clum">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="clum">
+      <span></span>
+    </div>
+    <div class="clum">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="face face6">
+    <div class="clum">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="clum">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="clum">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+
 </body>
 
 </html>
