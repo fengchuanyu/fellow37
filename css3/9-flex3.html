@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    ul{
+      display: flex;
+      height: 100vh;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: center;
+    }
+    li{
+      list-style: none;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      flex-grow: 1;
+    }
+    li:nth-child(even){
+      background-color: blue;
+    }
+    li:nth-child(4){
+      flex-grow: 2
+    }
+    /* li:nth-child(1){
+      order: 10;
+    } */
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+</html>
