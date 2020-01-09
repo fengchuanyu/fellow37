@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .div1{
+      width: 600px;
+      height: 600px;
+      background-color: blue;
+    }
+    .div2{
+      width: 400px;
+      height: 400px;
+      background-color: green;
+    }
+    .div3{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+  <button id="btn">add</button>
+  <script>
+    var oBtn = document.getElementById("btn");
+    var oUl = document.getElementsByTagName("ul")[0];
+    var aLi = oUl.getElementsByTagName("li");
+    // for(var i=0;i<aLi.length;i++){
+    //   aLi[i].onclick = function(){
+    //     console.log(this.innerText);
+    //   }
+    // }
+
+    oUl.onclick = function(e){
+      
+      if(e.target == e.currentTarget){
+        console.log("ul");
+      }else{
+        console.log(e.target);
+      }
+    }
+    oBtn.onclick = function(){
+      var oLi = document.createElement("li");
+      oLi.innerText = "hello";
+      oUl.append(oLi);
+    }
+  </script>  
+</body>
+</html>

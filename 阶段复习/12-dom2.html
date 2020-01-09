@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box {
+      color: red;
+    }
+  </style>
+  <script>
+    $(document).ready =function(){
+
+    }
+    window.onload = function () {
+      var oBtn = document.getElementById("btn");
+      var oNum = document.getElementById("num");
+      oBtn.onclick = function () {
+      var oH1 = document.createElement("h1");
+            oH1.innerText = "1";
+  oNum.append(oH1);
+        // oNum.innerHTML = "<h1>1</h1>";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <button id="btn">add</button>
+  <div id="num">0</div>
+
+</body>
+
+</html>

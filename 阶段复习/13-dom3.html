@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .div1{
+      width: 600px;
+      height: 600px;
+      background-color: blue;
+    }
+    .div2{
+      width: 400px;
+      height: 400px;
+      background-color: green;
+    }
+    .div3{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- js 事件机制 -->
+  <div class="div1">
+    <div class="div2">
+      <div class="div3"></div>
+    </div>
+  </div>
+  <script>
+    var oDiv1 = document.getElementsByClassName("div1")[0];
+    var oDiv2 = document.getElementsByClassName("div2")[0];
+    var oDiv3 = document.getElementsByClassName("div3")[0];
+
+    // oDiv1.addEventListener("click",function(){
+    //  console.log("div1");
+    // },true)
+    // oDiv2.addEventListener("click",function(){
+    //  console.log("div2");
+    // },true)
+    // oDiv3.addEventListener("click",function(){
+    //  console.log("div3");
+    // },true)
+
+
+    oDiv1.addEventListener("click",function(e){
+     console.log("div1");
+     
+    },false)
+    oDiv2.addEventListener("click",function(){
+     console.log("div2");
+    },false)
+    oDiv3.addEventListener("click",function(e){
+     console.log("div3");
+     e.stopPropagation();
+    },false)
+
+
+    // oDiv1.addEventListener("click",function(){
+    //  console.log("aaaa");
+      
+    // })
+
+    // oDiv1.onclick = function(){
+    //   console.log("div1")
+    // }
+    // oDiv1.onclick = function(){
+    //   console.log("aaaaa")
+    // }
+    // oDiv2.onclick = function(){
+    //   console.log("div2")
+    // }
+    // oDiv3.onclick = function(){
+    //   console.log("div3")
+    // }
+  </script>
+</body>
+</html>
