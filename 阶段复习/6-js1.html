@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var str = "hello";
+    // str = 10;  
+    // String Number Boolean undefind null
+    // Object Array
+
+    // var num1 = 10;
+    // var num2 = num1;
+    // console.log(num2)
+
+    // var arr = [1,2,3,4,5]
+    // var arr2 = arr;
+    // arr[0] = "a";
+    // console.log(arr2); 
+    // //false : null 0 undefind ""
+    // if(""){
+    //   console.log("true")
+    // }
+
+    // var a = "" || 0;
+    // console.log(a);
+    // var isTrue = ""
+    // var b = isTrue?"true":"false";
+    // console.log(b);
+
+    // var num = "1";
+    // switch(num){
+    //   case 0:console.log("0");break;
+    //   case "1":console.log("1");break;
+    //   case 2:console.log("2");break;
+    //   case 3:console.log("3");break;
+    //   default:console.log("default")
+    // }
+
+    // 
+    // if("1"===1){
+    //   console.log("true");
+    // }
+
+    // var sum = 1+1+"1";
+    // var str  = "hello" + "world";
+    // console.log(sum);
+
+
+    // function foo(a){
+    //   var a
+    //   a = 20
+    //   console.log(a);
+    //   a = 10;
+    // } 
+    // foo(20)
+    // var a
+    // function a(){
+    //   console.log("hello");
+    // }
+    // console.log(a);
+    
+    // a = 10;
+    
+    // var a
+    // console.log(a);
+    // a = function(){
+    //   console.log("foo");
+    // }
+    // var num = 0;
+    // var a = ++num;
+    // console.log(a);
+    // console.log(num);
+    
+    // for(var i = 0;i<10;i++){
+      
+    //   if(i==5){
+    //     continue;
+    //   }
+
+    //   console.log(i);
+    // }
+
+    // function foo(){
+    //   console.log("hello");
+    //   return "123"
+    // }
+    // var str = foo();
+    // console.log(str);
+
+    // function foo(){
+    //   console.log(a);
+    //   return "123";
+    //   var a = 10;
+    // }
+    // foo();
+
+    // function foo(a,b,c){
+    //   console.log(a,b,c)
+    // }
+    // foo(1,2,3,4,5);
+
+    function foo(){
+      var arr = Array.prototype.splice.call(arguments,0);
+      console.log(arr);
+    }
+    foo(1,2,3,4,5,6,7)
+
+    // var arr = [1,2,3,4,5,6,7];
+    // console.log(arr.splice(1))
+    
+  </script>
+</body>
+</html>
