@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box{
+      width: 600px;
+      border: 1px solid black;
+      margin:100px auto;
+    }
+    #box div{
+      width: 200px;
+      height: 200px;
+      float: left;
+    }
+    .div1{
+      background-color: red;
+     
+    }
+    .div2{
+      background-color: blue;
+    }
+    /* p{
+      clear: both;
+    } */
+    /* #box::after{
+      content: "";
+      clear: both;
+      display: block;
+    } */
+    #box{
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div class="div1"></div>
+    <div class="div2"></div>
+  </div>
+  <p>hello</p>
+</body>
+</html>
