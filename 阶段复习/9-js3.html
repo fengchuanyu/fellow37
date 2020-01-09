@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function foo(){
+    //   console.log(this);
+    // }
+    // foo();
+    // var name = "xiaogang";
+    // var obj = {
+    //   name:"xiaoming",
+    //   showName:function(){
+    //     function foo(){
+    //       console.log(this.name);
+    //     }
+    //     foo()
+    //   }
+    // }
+    // obj.showName();
+
+    //call bind apply
+    var name = "bbb";
+    function foo(str){
+      console.log(str+this.name)
+    }
+    var obj = {
+      name:"aaa"
+    }
+    // foo.apply(obj,["hello"])
+
+    var foo2 = foo.bind(obj,"hello");
+    foo2();
+  </script>
+</body>
+</html>

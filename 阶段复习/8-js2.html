@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+  <script>
+    var aLi = document.getElementsByTagName("li");
+    for(var i=0;i<aLi.length;i++){
+      // aLi[i].index = i;
+      (function(index){
+        // console.log(index)
+        aLi[i].onclick = function(){
+        // console.log(this.index)
+        console.log(index);
+        }
+      })(i)
+      
+    }
+    // var a = 100;
+    // function foo(){
+    //   var a = 10;
+    //   return function(){
+        
+    //     console.log(a);
+    //   }
+    // }
+    // var foo2 = foo();
+    // foo2();
+    // (function(){
+    //   var a = 10;
+
+    // })()
+  </script>
+</body>
+</html>
