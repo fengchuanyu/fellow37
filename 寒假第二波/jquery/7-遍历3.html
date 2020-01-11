@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li class="test">3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+  <script>
+    // $('li').has('ul').css('background-color', 'red');
+    // var $li=$("li");
+    // for(var i = 0;i<$li.length;i++){
+    //   if($($li[i]).is(".test")){
+    //     console.log($li[i])
+    //   }
+    // }
+
+    // $("li").is(".test").css('background-color', 'red');
+    var $list = $("li").map(function(){
+      if($(this).is(".test")){
+        return this
+      }
+    })
+    console.log($list)
+  </script>
+</body>
+
+</html>
