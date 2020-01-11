@@ -36,7 +36,12 @@
     </tbody>
   </table>
   <script>
-    
+    $(".parent").on("click",function(){
+      $(this).toggleClass("selected").nextUntil(".parent").toggleClass("is-show");
+
+      // var thisId = $(this).attr("id");
+      // $(this).toggleClass("selected").siblings("[class*="+this.id+"]").toggleClass("is-show");
+    })
   </script>
 </body>
 </html>
