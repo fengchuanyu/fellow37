@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+    <ul class="test">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li class="third-item test">list item 3
+          <!-- <div id="box">world</div> -->
+        </li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+        <li>list item 6</li>
+        <li class="li7">list item 7</li>
+        <li>list item 8</li>
+     </ul>
+     <div>hello</div>
+  <script>
+    // console.log($("ul").find("#box"));
+    
+    // console.log($("#box").closest(".test"));
+    
+    // console.log($(".third-item").children());
+    
+    // $('li.third-item').siblings().addBack().css('background-color', 'red');
+    // $(".third-item").next().css("color","red");
+    // $(".third-item").nextUntil(".li7").css("color","red");
+    
+    // console.log($("#box").parent());
+
+    // console.log($("#box").parents());
+    // console.log($("#box").parentsUntil("body"));
+    // console.log($(".li7").prevAll());
+    // console.log($(".li7").prevUntil(".third-item"));
+    $("li").on("click",function(){
+      $(this).toggleClass("active")
+    })
+    
+
+    
+ </script>
+</body>
+
+</html>
