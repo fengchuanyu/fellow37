@@ -28,9 +28,15 @@
     // }
 
     // $("li").is(".test").css('background-color', 'red');
-    var $list = $("li").map(function(){
+    // var $list = $("li").map(function(){
+    //   if($(this).is(".test")){
+    //     return this
+    //   }
+    // })
+
+    var $list = $("li").each(function(){
       if($(this).is(".test")){
-        return this
+        return this.id = "ddddd"
       }
     })
     console.log($list)
