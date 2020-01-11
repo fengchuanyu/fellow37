@@ -36,6 +36,9 @@
         </tbody>
       </table>
       <script>
+        $("tbody tr").on("click",function(){
+          $(this).addClass("selected").siblings().removeClass("selected").end().find(":radio").prop("checked",true);
+        })
       </script>
 </body>
 </html>
