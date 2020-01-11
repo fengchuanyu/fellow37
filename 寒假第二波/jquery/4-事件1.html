@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+    <button id="btn">add</button>
+  <script>
+    $("#btn").click(function(){
+      $("ul").append("<li>hello</li>")
+    })
+    $("ul").on("dblclick","li",function(){
+      console.log(this);
+    })
+
+    // obxo.onclick = function(){
+
+    // }
+    // obxo.onclick = function(){
+      
+    // }
+
+      // addEventListener("click",function(){})
+      // addEventListener("click",function(){})
+
+  //  $("li").click(function(){
+     
+  //    console.log($(this).text())
+  //  })
+  // $("ul").click(function(e){
+  //   console.log(e)
+  // })
+  </script>
+</body>
+
+</html>
