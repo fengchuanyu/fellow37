@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    #box2{
+      width: 400px;
+      height: 400px;
+      background-color: blue;
+    }
+    #box{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- js事件机制 事件冒泡（后） 事件捕获（先） -->
+  <div id="box2">
+    <div id="box">hello</div>
+  </div>
+
+  <button id="btn">btn</button>
+  <script>
+    $("#box2").on("click",function(e){
+      console.log("box2")
+
+    })
+    $("#box").on("click",function(e){
+      console.log("box");
+      e.stopPropagation();
+    })
+
+    $("#btn").on("click",function(){
+      // $("#box").trigger("click");
+      $("#box").triggerHandler("click");
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div id="box">hello</div>
+  <button id="btn">off</button>
+  <script>
+    var oBtn = document.getElementById("box");
+    var offBtn = document.getElementById("btn");
+
+    function foo(){
+      console.log("click");
+    }
+    $("#box").on("click",foo)
+    $("#btn").on("click",function(){
+      $("#box").off("click",foo);
+    })
+
+
+
+
+
+    // oBtn.addEventListener("click",foo);
+    
+    // offBtn.addEventListener("click",function(){
+    //   oBtn.removeEventListener("click",foo);
+    // })
+
+    // var obj = {name:"a"}
+    // // var obj2 = {name:"a"}
+    // obj2=obj
+
+
+    // oBtn.onclick = function(){
+    //   console.log("onclick");
+    // }
+    // offBtn.onclick = function(){
+    //   oBtn.onclick = null
+    // }
+
+  </script>
+</body>
+</html>
