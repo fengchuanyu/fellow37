@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div id="box">
+    <input name="user" type="text" id="inp">
+  </div>
+  <script>
+      $("#box").focusin(function(){
+        console.log("in");
+        
+      })
+      $("#box").focusout(function(){
+        console.log("out");
+        
+      })
+  </script>
+</body>
+</html>

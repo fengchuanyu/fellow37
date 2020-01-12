@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <!-- <form id="form1" action="xxx.php"> -->
+      <input name="user" type="text" id="inp">
+      <select name="sel" class="target">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+      </select>
+      <button type="button">提交</button>
+  <!-- </form> -->
+  
+  <script>
+    // $("#inp").keydown(function(){
+    //   console.log($(this).val());
+    // })
+
+    $("#inp").keyup(function(e){
+      // console.log($(this).val());
+      console.log(e.which);
+    })
+
+    // $("#form1").submit(function(e){
+    //   console.log("submit");
+      
+    //   e.preventDefault();
+    // })
+    // $("#inp").select(function(){
+    //   console.log("select")
+    // })
+    // $(".target").change(function(){
+    //   console.log($(this).val());
+    // })
+    // $("#inp").focus()
+    // $("#inp").focus(function(){
+    //   console.log("focus");
+    // })
+    // $("#inp").blur(function(){
+    //   console.log("blur");
+      
+    // })
+  </script>
+</body>
+</html>
