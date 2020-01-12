@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+   
+  </style>
+</head>
+<div id="box"></div>
+<body>
+  <script>
+    $.fn.extend({
+      fellow37:function(obj){
+        var defaultPerson = {
+          name:"小明",
+          age:20,
+          school:"理工"
+        }
+
+        $.extend(defaultPerson,obj)
+
+        this.html(
+        "<div>学校："+defaultPerson.school+"</div>"+
+        "<div>姓名："+defaultPerson.name+"</div>"+
+        "<div>年龄："+defaultPerson.age+"</div>"
+        )
+      }
+    })
+    // $.fn.extend({
+    //   fellow37:function(str){
+    //     // console.log(this)
+    //     // this.get(0).innerText = str;
+    //     this.text(str)
+        
+    //   }
+    // })
+    // $("#box").text("hello");
+    var person = {
+      school:"林大",
+      age:18
+    }
+    $("#box").fellow37(person);
+    
+  </script>
+</body>
+</html>
