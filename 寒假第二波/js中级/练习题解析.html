@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // //1、写出下列输出结果
+    // var x = 10;
+    // function test() {
+    //   this.x = 20
+    // }
+    // test()
+    // console.log(x)
+    // var a = 10;
+    // if(a = 0){
+    //   console.log("yes");
+    // }
+
+    //5、请写出下列代码运行结果
+    var name = "window"
+    var obj = {
+      name:"obj"
+    }
+    window.setInterval(function(){
+      console.log(this.name)
+    }, 300)
+    window.setInterval(function(){
+      console.log(this.name)
+    }.call(obj),300)
+  </script>
+</body>
+
+</html>

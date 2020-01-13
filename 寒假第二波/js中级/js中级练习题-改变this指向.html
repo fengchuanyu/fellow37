@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1、写出下列输出结果
+    var x = 10;
+    function test(){
+  　  this.x = 20
+  　　console.log(this.x)
+    }
+    test()  
+
+
+    //2、写出下列输出结果
+    var name= "window"
+    var obj = {
+      name:"obj",
+      func1 : function() {
+        console.log(this.name);
+        (function(){
+          console.log(this.name)
+        })()
+      }
+    }
+    obj.func1()
+
+
+    //3、写出下列结果
+    var name="the window";
+
+    var object={
+        name:"My Object", 
+        getName:function(){ 
+          return this.name;
+      } 
+    }
+
+    console.log(object.getName());   
+    console.log((object.getName)());   
+    console.log((object.getName=object.getName)());
+
+    //4、下列代码中当div的点击事件触发时输出的结果是？
+    document.getElementById("div").onclick = function(){
+      console.log(this)
+    };
+
+
+    //5、请写出下列代码运行结果
+    var name = "window"
+    var obj = {
+      name:"obj"
+    }
+    window.setInterval(function(){
+      console.log(this.name)
+    }, 300)
+    window.setInterval(function(){
+      console.log(this.name)
+    }.call(obj),300)
+
+    //6、请补全下列代码
+    function foo(){
+      //补全此处代码实现每隔一秒输出 hello world
+    }
+    window.setInterval(foo(),1000);
+
+
+    // 7、补全下列代码实现 1+2+3+4
+    function add(c, d) {
+      return this.a + this.b + c + d;
+    }
+
+    /*
+      在此补全代码 以两种以上方法实现
+    */
+
+
+    //8、写出下列输出结果
+    function f(){
+      return this.a;
+    }
+
+    var g = f.bind({a:"azerty"});
+    console.log(g()); 
+
+    var h = g.bind({a:'yoo'}); 
+    console.log(h()); 
+
+    var o = {a:37, f:f, g:g, h:h};
+    console.log(o.f(), o.g(), o.h()); 
+
+
+    //9、补全下列代码
+    var o = {prop: 37};
+
+    function independent() {
+      return this.prop;
+    }
+    //在此补全代码
+    console.log(o.f()); //  37
+
+    //10、用call 或 apply 实现bind 方法
+
+    var foo2 = foo.bind2(obj);
+    foo2()
+  </script>
+</body>
+</html>
