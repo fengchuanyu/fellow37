@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //任务队列  主线程（执行栈）   event loop(事件循环)
+    // var a = 20;
+    // setTimeout(function(){
+    //   a = 10
+    // },0)
+    // console.log(a);
+
+    // var a = 10;
+    // var a = 20;
+    // console.log(a);
+
+    // function foo(){
+    //   var a = 10;
+    //   setTimeout(function(){
+    //     return a;
+    //   },1000)
+    // }
+    // console.log(foo());
+
+
+    function foo2(fun){
+      setTimeout(fun,1000);
+    }
+
+    function foo(){
+      console.log("hello")
+    }
+    console.log(foo2(foo))
+
+  </script>
+</body>
+</html>
