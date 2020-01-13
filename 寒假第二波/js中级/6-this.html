@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<div id="box">add</div>
+<body>
+  <script>
+    //context 执行上下文
+    // function foo(){
+    //   console.log(this);
+    // }  
+    // console.log(this);
+    
+    // window.foo();
+    // var oBox = document.getElementById("box");
+    // oBox.onclick = function(){
+    //   console.log(this)
+    // }  
+
+    var name = "bbb";
+    var obj = {
+      name:"aaa",
+      showName:function(){
+        var _this = this;
+        (function(){
+          console.log(_this.name);
+        })()
+      }
+    }
+    obj.showName();
+  </script>
+</body>
+</html>

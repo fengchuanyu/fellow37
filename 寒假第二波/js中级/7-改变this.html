@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var name = "bbb";
+    var obj = {
+      name:"aaa"
+    }
+    function foo(str,str2){
+      console.log(str+this.name+str2);
+    }
+    // foo("hello ");
+
+    // foo.call(obj,"hello ","world");
+    // foo.apply(obj,["hello "," world"])
+    // var foo2 = foo.bind(obj,"hello "," world");
+    foo2()
+
+
+
+  </script>
+</body>
+</html>

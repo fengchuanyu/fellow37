@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function foo(){
+    //   var a = 10;
+    // }
+    // foo();
+    // console.log(a)
+    //作用域链
+    // var a = 30;
+    // function foo(){
+    //   var a = 10;
+    //   function foo2(){
+    //     var a =1;
+    //     console.log(a)
+    //   }
+    //   foo2()
+    // }
+    // foo();
+
+    //闭包 
+    function foo(a){
+      return function(){
+        console.log(a)
+      }
+    }
+    var foo2 = foo(10);
+    foo2();
+
+  </script>
+</body>
+</html>
