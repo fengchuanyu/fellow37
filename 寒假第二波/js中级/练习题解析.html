@@ -22,17 +22,57 @@
     //   console.log("yes");
     // }
 
-    //5、请写出下列代码运行结果
-    var name = "window"
-    var obj = {
-      name:"obj"
+    // //5、请写出下列代码运行结果
+    // var name = "window"
+    // var obj = {
+    //   name:"obj"
+    // }
+    // window.setInterval(function(){
+    //   console.log(this.name)
+    // }, 300)
+    // window.setInterval(function(){
+    //   console.log(this.name)
+    // }.call(obj),300)
+
+
+    // //6、请补全下列代码
+    // function foo(){
+    //   return function(){
+    //     console.log("hello world")
+    //   }
+    // }
+    // window.setInterval(foo(),1000);
+
+     // 7、补全下列代码实现 1+2+3+4
+    //  function add(c, d) {
+    //   return this.a + this.b + c + d;
+    // }
+    // var obj = {
+    //   a:1,
+    //   b:2
+    // }
+    // console.log(add.call(obj,3,4));
+    
+    
+    /*
+      在此补全代码 以两种以上方法实现
+    */
+
+
+    // function f(){
+    //   return this.a;
+    // }.bind(xx).bind(xxx)
+
+    //9、补全下列代码
+    var o = {prop: 37};
+
+    function independent() {
+      return this.prop;
     }
-    window.setInterval(function(){
-      console.log(this.name)
-    }, 300)
-    window.setInterval(function(){
-      console.log(this.name)
-    }.call(obj),300)
+    o.f = function(){
+      return  independent.call(this)
+    }
+    console.log(o.f()); //  37
   </script>
 </body>
 

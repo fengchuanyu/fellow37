@@ -78,6 +78,7 @@
     /*
       在此补全代码 以两种以上方法实现
     */
+    
 
 
     //8、写出下列输出结果
@@ -86,13 +87,13 @@
     }
 
     var g = f.bind({a:"azerty"});
-    console.log(g()); 
+    console.log(g()); //azerty
 
-    var h = g.bind({a:'yoo'}); 
-    console.log(h()); 
+    var h = g.bind({a:'yoo'}); //bind 不能重复使用如果多次使用只识别第一次bind
+    console.log(h()); //azerty
 
     var o = {a:37, f:f, g:g, h:h};
-    console.log(o.f(), o.g(), o.h()); 
+    console.log(o.f(), o.g(), o.h());//37 azerty  azerty
 
 
     //9、补全下列代码
@@ -105,7 +106,7 @@
     console.log(o.f()); //  37
 
     //10、用call 或 apply 实现bind 方法
-
+    
     var foo2 = foo.bind2(obj);
     foo2()
   </script>

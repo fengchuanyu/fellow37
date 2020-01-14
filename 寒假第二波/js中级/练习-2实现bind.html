@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var name="bbb";
+    var obj = {
+      name:"aaa"
+    }
+    function foo(str,str2){
+      console.log(str+this.name+str2);
+      
+    }
+    // var foo2 = foo.bind(obj);
+    // foo2()
+
+    Function.prototype.bind2 = function(){
+      // var thisObj = arguments[0];
+      var arr = Array.prototype.slice.call(arguments,1)
+      
+      var _this = this;
+      return function(){
+        _this.apply(obj,arr)
+      }
+    }
+    var foo2 = foo.bind2(obj,"hello","world")
+    foo2()
+    // var foo2 = foo.bind2(obj);
+    // foo2()
+  </script>
+</body>
+</html>
