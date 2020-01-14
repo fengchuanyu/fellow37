@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+     #box{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transition: all 1s ease;
+      position: absolute;
+      /* animation:foo 1s ease; */
+      animation-name: foo;
+      animation-timing-function: ease;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes foo{
+      0%{
+        top:0;
+        left:0;
+      }
+      50%{
+        top:50%;
+        left:50%;
+        transform: rotate(0)
+      }
+      100%{
+        top:50%;
+        left:50%;
+        transform: rotate(180deg);
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="box">hello</div>
+</body>
+</html>

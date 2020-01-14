@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1489251_7r40883hza8.css">
+  <style>
+   
+    #box{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transform: rotate(45deg);
+    }
+    .div1{
+      width: 200px;
+      height: 200px;
+      border:1px dashed black;
+      margin:300px auto;
+      position: relative;
+      transform: scale(2);
+    }
+    .fu{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 10;
+    }
+    .fu .iconfont{
+      font-size: 100px;
+    }
+    #box{
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <div class="fu"><i class="iconfont icon-fu"></i></div>
+    <div id="box"></div>
+  </div>
+  
+  
+  
+</body>
+</html>
