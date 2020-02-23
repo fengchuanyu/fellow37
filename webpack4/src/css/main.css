@@ -1,0 +1,22 @@
+#div1{
+  height: 400px;
+  width: 400px;
+  background-color: gray;
+}
+#div2{
+  height: 400px;
+  width: 400px;
+  background-image: url(../image/slider3.jpg);
+  background-repeat: no-repeat;
+  transform: rotate(30deg);
+  box-shadow: 1px 1px 1px black;
+}
+::placeholder {
+  color: gray;
+}
+.testclass{
+  color: red;
+}
+#div10{
+  color: red;
+}

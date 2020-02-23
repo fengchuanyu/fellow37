@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/react.development.js"></script>
+  <script src="./js/react-dom.development.js"></script>
+  <script src="./js/babel.min.js"></script>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+  <script type="text/babel">
+    class Com1 extends React.Component{
+      constructor(props){
+        console.log("父组件constructor");
+        super(props)
+        this.state={
+          num:0
+        }
+        this.addHandle = this.addHandle.bind(this);
+      }
+      addHandle(){
+        this.setState({
+          num:this.state.num+1
+        })
+      }
+
+      componentDidMount() {
+        console.log("父组件componentDidMount");
+      }
+
+      componentDidUpdate(prevProps, prevState) {
+        console.log("父组件componentDidUpdate",prevProps,prevState);
+      }
+      
+      render(){
+        console.log("父组件render");
+        return(
+          <div>
+            <h1>{this.state.num}</h1>
+            <button onClick={this.addHandle}>add</button> 
+            <Com2 count={this.state.num}/> 
+            {/*this.state.num>0?"":<Com2/>*/}
+          </div>
+        )
+      }
+    }
+
+    class Com2 extends React.Component{
+      constructor(props){
+        console.log("子组件constructor");
+        super(props)
+        this.state={
+
+        }
+        this.timer = null;
+      }
+
+      componentDidMount(){
+        console.log("子组件componentDidMount");
+        // this.timer = setInterval(() => {
+        //   console.log("hello")
+        // }, 1000);
+      }
+      componentDidUpdate(){
+        console.log("子组件componentDidUpdate");
+      }
+      componentWillUnmount() {
+        // clearInterval(this.timer)
+        console.log("componentWillUnmount")
+      }
+
+      render(){
+        console.log("子组件render");
+        return(
+          <div>
+            <h1>子组件</h1>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(
+      <Com1 msg="hello"/>,
+      document.getElementById("root")
+    )
+  </script>
+</body>
+</html>

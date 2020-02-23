@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+    }
+    .left{
+      width: 200px;
+      height: 400px;
+      background-color: blue;
+      float: left;
+    }
+    .right{
+      height: 400px;
+      background-color: red;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">left</div>
+    <div class="right">right(利用BFC特性)</div>
+  </div>
+</body>
+</html>

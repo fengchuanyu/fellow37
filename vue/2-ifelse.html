@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li>衣服：<span>{{goods1}}</span></li>
+      <li>裤子：
+        <span v-if="goods2 != 0">{{goods2}}</span>
+        <span v-else>已售空</span>
+      </li>
+      <li>外套：<span>{{goods3}}</span></li>
+    </ul>
+  </div>
+  
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        goods1:10,
+        goods2:0,
+        goods3:30
+      }
+    })
+  </script>
+</body>
+</html>

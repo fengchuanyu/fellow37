@@ -1,0 +1,123 @@
+$maincolor:blue;
+#div1{
+  background-color: $maincolor;
+  #div2{
+    color: red;
+  }
+}
+#box{
+  color: $maincolor;
+  #box2{
+    font-size: 20px
+  }
+  &:hover{
+    color: red;
+  }
+  &-heaer{
+    font-size: 10px;
+  }
+  &-footer{
+    background-color: #fff;
+  }
+}
+
+@mixin foo($num,$col:blue) {
+  width: $num;
+  height: $num;
+  background-color: $col;
+}
+#div3{
+  @include foo($col:red,$num:200px);
+  color: red;
+}
+#div4{
+  @include foo(400px);
+  font-size: 20px
+}
+
+#div5{
+  background-color: green;
+  font-size: 30px;
+  width: 100px;
+}
+#div6{
+  @extend #div5;
+  height: 200px;
+}
+
+@import "./base.scss";
+#div7{
+  width: (300px/200);
+  height: abs(-100px);
+}
+$imgname:"xx.jpg";
+#div8{
+  width: percentage(80px/1000px);
+  background-image: url("./img/"+to-upper-case($imgname));
+}
+$testcolor:rgb(255,255,0);
+$test2color:rgba(255,255,0,0.5);
+#div9{
+  // color: lighten($testcolor,10%);
+  // background-color: darken($testcolor,10%);
+  color:transparentize($testcolor,0.3);
+  background-color: opacify($test2color,0.2);
+}
+$testlist:(1px solid black);
+$test2list:red black blue green;
+#div10{
+  border:$testlist;
+  color:nth($test2list,1);
+}
+$m:(color:red,font-size:30px);
+#div11{
+  color: map-get($m,color);
+  font-size: map-get($m,font-size)
+}
+$testtext:"hello";
+$test2text:"color";
+$test3text:"#div13";
+#div12{
+  #{$test2text}:red;
+}
+#{$test3text}{
+  color: red;
+}
+/* test #{$testtext} */
+//testj
+/*test 22*/
+/*! test3 */
+@function foo($num){
+  @if($num == 1){
+    @return red;
+  }
+  @else if($num == 2){
+    @return blue;
+  }@else{
+    @warn "error1";
+    @return green;
+  }
+}
+#div14{
+  color: foo(10);
+}
+@for $i from 1 to 10 {
+  #test-#{$i}{
+    width: $i*100px;
+  }
+}
+
+$test3list: red blue green yellow;
+
+@each $var in $test3list {
+  #test-#{$var}{
+    color: $var
+  }
+}
+$j:1;
+@while $j<10 {
+  #span-#{$j}{
+    width: $j*10px;
+  }
+  $j:$j+1;
+}

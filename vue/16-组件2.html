@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <com1 v-bind:comname="name" @testhandle="parentHandle"></com1>
+    <h1>父组件:{{name}}</h1> 
+  </div>
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        name:"小刚"
+      },
+      methods:{
+        parentHandle(newName){
+          // console.log("hello");
+          // this.name="小李"
+          console.log(newName);
+          this.name= newName
+        }
+      },
+      components:{
+        com1:{
+          props:['comname'],
+          template:`
+            <div>
+              <h1>我的名字是:{{comname}}</h1>  
+              <button @click="changeName">changeName</button>
+            </div>
+          `,
+          methods: {
+            changeName(){
+              // console.log(this.comname);
+              // this.comname = "小李"
+              this.$emit('testhandle',"小张")
+            }
+          }
+        }
+      }
+    })
+
+  </script>
+</body>
+</html>

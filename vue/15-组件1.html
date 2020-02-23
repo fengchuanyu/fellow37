@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <fellow-test></fellow-test>
+    <com1></com1>
+  </div>
+  <div id="app2">
+    <fellow-test></fellow-test>
+  </div>
+  <script>
+    Vue.component("fellowTest",{
+      template:`
+        <div>
+          <h1>hello fellow37</h1>
+          <p>hello world</p>
+        </div>
+      `
+    })
+    new Vue({
+      el:"#app",
+      data:{
+        
+      },
+      components:{
+        com1:{
+          template:`
+            <div>
+              <h1>这是一个局部组件</h1>  
+            </div>
+          `
+        }
+      }
+    })
+    new Vue({
+      el:"#app2",
+      data:{
+        
+      }
+    })
+
+  </script>
+</body>
+</html>

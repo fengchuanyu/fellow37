@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    var arr = [1,2,3,4,3,4,5];
+    // var arrSort =[1,2,3,3,4,4,5]; 
+    // 方案一 利用splice
+    // function unique(arr){
+    //   for(var i=0;i<arr.length;i++){
+    //     for(var j=i+1;j<arr.length;j++){
+    //       if(arr[i] == arr[j]){
+    //         arr.splice(j,1);
+    //         j--;
+    //       }
+    //     }
+    //   }
+    //   return arr;
+    // }
+
+    //方案二 利用的indexOf 和 新数组
+    // function unique(arr){
+    //   var newArr = [];
+    //   for(var i=0;i<arr.length;i++){
+    //     if(newArr.indexOf(arr[i]) == -1){
+    //       newArr.push(arr[i]);
+    //     }
+    //   }
+    //   return newArr;
+    // }
+
+    //方案三 sort 和 新数组
+    // function unique(arr){
+    //   arr = arr.sort(function(a,b){
+    //     return a-b
+    //   });
+    //   let newArr = [arr[0]];
+    //   for(var i = 1;i<arr.length;i++){
+    //     if(arr[i] != arr[i-1]){
+    //       newArr.push(arr[i]);
+    //     }
+    //   }
+    //   return newArr;
+    // }
+
+    //方案四 利用对象属性名不能重复
+    // function unique(arr){
+    //   let newArr = [];
+    //   let obj = {};
+    //   for(let i = 0;i<arr.length;i++){
+    //     if(!(arr[i] in obj)){
+    //       newArr.push(arr[i]);
+    //       obj[arr[i]] = 1;
+    //     }else{
+    //       obj[arr[i]]++;
+    //     }
+    //   }
+    //   console.log(obj);
+    //   return newArr;
+    // }
+
+
+    // var arr = [1,2,3,4,3,4,5];
+    // 方案五 利用filter
+    // function unique(arr){
+    //   let newArr = []
+    //   newArr = arr.filter(function(val,key,arr1){
+    //     return arr1.indexOf(val) == key
+    //   })
+    //   return newArr
+    // }
+
+    //方案六 es六 语法
+    // function unique(arr){
+    //   // return Array.from(new Set(arr));
+    //   return [...new Set(arr)];
+    // }
+    
+    
+
+    console.log(unique(arr));
+  </script>
+</body>
+</html>

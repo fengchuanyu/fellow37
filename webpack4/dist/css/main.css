@@ -1,0 +1,43 @@
+/*! fellow37 */
+#div2 {
+  background-color: red;
+}
+
+#div1 {
+  height: 400px;
+  width: 400px;
+  background-color: gray;
+}
+
+#div2 {
+  height: 400px;
+  width: 400px;
+  background-image: url(http://127.0.0.1:8081/images/ef29ec9d7da19d078626d65e6d0a6339.jpg);
+  background-repeat: no-repeat;
+  transform: rotate(30deg);
+  box-shadow: 1px 1px 1px black;
+}
+
+::-webkit-input-placeholder {
+  color: gray;
+}
+
+::-moz-placeholder {
+  color: gray;
+}
+
+:-ms-input-placeholder {
+  color: gray;
+}
+
+::-ms-input-placeholder {
+  color: gray;
+}
+
+::placeholder {
+  color: gray;
+}
+
+#div10 {
+  color: red;
+}

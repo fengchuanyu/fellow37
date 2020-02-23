@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      // async function foo(){
+      //   // return "hello";
+      //   // return Promise.resolve("hello");
+      // }
+      // foo().then(function(res){
+      //   console.log(res);
+        
+      // })
+      // function getNum(num){
+      //   return new Promise(function(resolve,reject){
+      //     setTimeout(function(){
+      //       resolve(num)
+      //     },1000)
+      //   })
+      // }
+
+      // async function foo(){
+      //   console.log(1);
+      //   await getNum(2).then(function(res){
+      //     console.log(res)
+      //   }) 
+      //   console.log(3);
+      // }
+      // foo();
+
+      async function foo(){
+        try{
+          console.log(1);
+          await Promise.reject("失败了");
+          console.log("123");
+        }catch(err){
+          console.log(err)
+        }
+      }
+      foo()
+  </script>
+</body>
+</html>

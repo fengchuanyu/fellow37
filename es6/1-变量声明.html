@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+  <script>
+    // 方案一  添加index
+    // var aLi = document.getElementsByTagName("li");
+    // for(var i=0;i<aLi.length;i++){
+    //   aLi[i].index = i;
+    //   aLi[i].onclick = function(){
+    //     // console.log(i);
+    //     console.log(this.index);
+
+    //   }
+    // }
+
+    //方案二 闭包
+    // var aLi = document.getElementsByTagName("li");
+    // for (var i = 0; i < aLi.length; i++) {
+    //   (function (index) {
+    //     aLi[i].onclick = function () {
+    //       console.log(index);
+    //     }
+    //   })(i)
+    // }
+
+    // 方案三 let 块作用域
+    // var aLi = document.getElementsByTagName("li");
+    // for (let i = 0; i < aLi.length; i++) {
+    //   aLi[i].onclick = function () {
+    //     console.log(i);
+    //   }
+    // }
+
+
+    // var a;
+    // console.log(a);
+    // a = 10;  
+    // var a = 10;
+    // var a = "abc";
+
+    // console.log(a);
+    // let a = 10;
+    // let a = 10;
+    // let a = "abc";
+
+    // var a = 10;
+    // let a = "abc";
+    // console.log(window.a);
+
+    // if(true){
+    //   var a = 10;
+    // }
+    // function foo(){
+    //   var b = "abc";
+    // }
+    // foo();
+    // console.log(b);
+    // console.log(a);
+
+    // if(true){
+    //   let a = 10;
+    //   console.log(a);
+
+    // }
+    // console.log(a);
+
+    // console.log(a)
+    // const a = 10;
+
+    // const a = 10;
+    // a = 20;
+
+    // const obj = {
+    //   name:"abc"
+    // }
+    // // obj.name="bcd";
+    // obj = {}
+    // console.log(obj);
+
+    // const obj = {
+    //   name:"abc"
+    // }
+    // Object.freeze(obj)
+    // obj.name = "bcd";
+    // console.log(obj);
+    
+
+  </script>
+</body>
+
+</html>

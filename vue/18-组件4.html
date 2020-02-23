@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <global-com1 :com1props="num"></global-com1>
+  </div>
+  <template id="com1">
+    <div>
+      <h1>hello{{com1props}}</h1>
+      <global-com2 :com2props="com1props"></global-com2>
+    </div>
+  </template>
+  <template id="com2">
+    <div>
+      <h1>world{{com2props}}</h1>
+    </div>
+  </template>
+  <script>
+    Vue.component("globalCom1", {
+      template: "#com1",
+      props:['com1props']
+    })
+    Vue.component("globalCom2",{
+      template:"#com2",
+      props:['com2props']
+    })
+    new Vue({
+      el: "#app",
+      data: {
+        num:123
+      }
+    })
+  </script>
+</body>
+
+</html>

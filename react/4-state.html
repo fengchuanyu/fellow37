@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/react.development.js"></script>
+  <script src="./js/react-dom.development.js"></script>
+  <script src="./js/babel.min.js"></script>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+  <script type="text/babel">
+    //有状态组件 => 类组件
+    class Foo extends React.Component{
+      constructor(props){
+        super(props)
+        this.state={
+          num:0,
+          count:10
+        }
+        this.addHandle = this.addHandle.bind(this);
+      }
+
+      addHandle(){
+        console.log(this.state.num)
+        // this.state.num = 10
+        this.setState({
+          num:++this.state.num
+        })
+        // this.setState(function(state,props) {
+        //   console.log(state,props)
+        //   return {
+        //     num:++state.num
+        //   }
+        // })
+        // this.setState((state,props)=>({
+        //   num:++state.num
+        // }))
+      }
+
+      render(){
+        return (
+          <div>
+            <h1> {this.state.num} </h1>
+            <h1> {this.state.count} </h1>
+            <button onClick={this.addHandle}>add</button>
+          </div>
+        )
+      }
+    }
+
+
+    ReactDOM.render(
+      <Foo msg="hello"/>,
+      document.getElementById("root")
+    )
+    // 绑定事件方法一
+    // <button onClick={this.addHandle.bind(this)}>add</button>
+    // 绑定事件方法二
+    // <button onClick={()=>this.addHandle()}>add</button>
+  </script>
+</body>
+</html>

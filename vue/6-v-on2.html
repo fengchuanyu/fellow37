@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+  <style>
+    #div1{
+      width: 400px;
+      height: 400px;
+      background-color: red;
+    }
+    #div2{
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="div1" v-on:click.once='div1Click("1",$event)'>
+      <div id="div2" v-on:click.stop="div2Click($event)"></div>
+    </div>
+    <a href="https://www.baidu.com" v-on:click.prevent="aHandle">百度</a>
+    <input type="text" v-on:keyup.enter="inputHandle">
+  </div>
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        
+      },
+      methods: {
+        inputHandle(){
+          console.log("input")
+        },
+        aHandle(){
+          console.log("百度")
+          // e.preventDefault(); 阻止默认行为 原生方法
+        },
+        div1Click(i,e){
+          console.log("div1")
+          console.log(i,e);
+          
+        },
+        div2Click(e){
+          console.log("div2")
+          // e.stopPropagation(); 阻止冒泡 原生语法
+        }
+      }
+    })
+  </script>
+</body>
+</html>

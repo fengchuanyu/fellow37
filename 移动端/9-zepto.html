@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/zepto.js"></script>
+  <script src="./js/touch.js"></script>
+  <style>
+    #box{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    #div1{
+      width: 80px;
+      height: 80px;
+      background-color: blue;
+      position: absolute;
+      top:0;
+      left:0;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <div id="div1"></div>
+  <script>
+    // $("#box").text("hello")
+    // $("#box").on("tap",function(){
+    //   console.log("tap")
+    // })
+    $("#div1").on("touchend",function(e){
+      $(this).hide();
+      console.log("touchend");
+      e.preventDefault();
+    })
+    $("#box").click(function(){
+      console.log("click")
+    })
+  </script>
+</body>
+</html>

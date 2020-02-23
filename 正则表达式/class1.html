@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let str = "hello world";
+    // // console.log(str.indexOf("w"));
+    // // console.log(str.includes('w'));
+
+    // let reg = /w/;
+    // let reg2 = new RegExp("w");
+    // console.log(reg.test(str));
+    // console.log(reg2.exec(str));
+    
+    // let str = "hello wawaorld";
+    // let reg = /wa{2,}/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello wwwworld";
+    // let reg = /w+?/
+    // console.log(reg.exec(str));
+
+    // let str = "img.jpg";
+    // let reg = /jpg$/;
+    // console.log(reg.exec(str));
+
+    // let str = "iimg.jpg";
+    // let reg = /^img/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello你好\n world";
+    // let reg = /.+/;
+    // let str = "\nhello你好\n world";
+    // let reg = /^./;
+    // console.log(reg.exec(str));
+
+    // let str = "ehello world";
+    // let reg = /^e|o.+/;
+    // console.log(reg.exec(str));
+
+    // let str = "ehello world";
+    // let reg = /^(e|o).+/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello a world";
+    // let reg = /[abc]/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello a 1 A world";
+    // let reg = /[a-zA-Z]/;
+
+    // let reg2 = /^[a-zA-Z][a-zA-Z0-9_]+/;
+    // let str = "hello1 world";
+    // let reg = /[a-zA-Z][0-9]/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello world";
+    // let reg = /[^hdl]/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello world";
+    // let reg = /d\b/;
+    // let str = "你好c";
+    // let reg = /\bc/;
+
+    // let str = "ello he world";
+    // let reg = /\Bh/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello 12 world";
+    // let reg = /\d/;
+    // let reg2 = /[0-9]/
+    // let str = "hello 12 world";
+    // let reg = /\D/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello world";
+    // let reg = /\s.+/;
+    // let reg2 = /\S.+/;
+    // console.log(reg2.exec(str));
+    
+    // let str = "hello world";
+    // let reg = /\w+/;
+    // let str = "hello world";
+    // let reg = /\W/;
+    // console.log(reg.exec(str));
+
+
+    // let str = "hello world";
+    // let reg = /(\w)/;
+    // let reg2 = /\w/;
+    // console.log(reg.exec(str));
+    // console.log(reg2.exec(str));
+    // let str = "helolo world";
+    // // let reg = /(\w)(\w)/;
+    // let reg = /(\w)(\w)\1\2/;//ABAB
+    // console.log(reg.exec(str));
+
+    // let str = "hello world";
+    // let reg = /(?:\w)/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello helloww world";
+    // let reg = /hello(?=ww)/;
+    // console.log(reg.exec(str));
+    // let str = "hello helloww world";
+    // let reg = /hello(?!ww)/;
+    // console.log(reg.exec(str));
+
+
+    // let str = "hello * world.jpg";
+    // let reg = /\.jpg$/;
+    // console.log(reg.exec(str));
+
+    // let str = "hello world";
+    // let reg = /R/i;
+    // console.log(reg.exec(str));
+
+    // let str = "hello\nworld";
+    // console.log(str)
+    // let reg = /^w/m;
+    // console.log(reg.exec(str));
+
+    // let str = "hello world";
+    // let reg = /w/;
+    // console.log(reg.exec(str));
+    // console.log(str.match(reg));
+
+    // let str = "hello world";
+    // let reg = /l/g;
+    // console.log(str.replace(reg,"-"));
+
+    // let str = "hello world";
+    // let reg = /(?<a>\w+) (?<b>\w+)/;
+    // console.log(str.replace(reg,"$2-$1"));
+    
+    // console.log(reg.exec(str));
+
+
+    //习题
+    // 30CAC0040 取出40
+    // 3SFASDF92 取出92
+
+    // let str1 = "30CAC0040";
+    // let str2 = "3SFASDF92";
+
+    // let reg = /\d{2}$/
+    // console.log(reg.exec(str2));
+
+
+    let str = "蓝      色    理     想   ";
+    console.log(str);
+    let reg = /\s+/g;
+    // console.log(reg.exec(str));
+    console.log(str.replace(reg," "));
+    
+    
+
+    
+    
+
+
+
+    
+
+    
+    
+    
+    
+
+      
+  </script>
+</body>
+</html>

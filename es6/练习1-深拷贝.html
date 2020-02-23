@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let obj = {
+    //   name:"xx",
+    //   age:"20",
+    //   school:"理工"
+    // } 
+    // // let obj2 = obj; //浅拷贝 
+    
+
+    // obj.name = "小a";
+    // console.log(obj2);
+
+    //单层完全拷贝 方案一
+    // let obj = {
+    //   name:"xx",
+    //   age:"20",
+    //   school:"理工"
+    // } 
+    // let obj2 = {}; 
+    // Object.assign(obj2,obj);
+
+    // obj.name = "小a";
+    // console.log(obj2);
+
+    //单层完全拷贝 方案二
+    // let obj = {
+    //   name:"xx",
+    //   age:"20",
+    //   school:"理工"
+    // } 
+    // let obj2 = {...obj}; 
+    
+    // obj.name = "小a";
+    // console.log(obj2);
+
+    //单层完全拷贝 方案三
+    // let obj = {
+    //   name:"xx",
+    //   age:"20",
+    //   school:"理工"
+    // } 
+    // let obj2 = {}
+    // for(let key in obj){
+    //   // console.log(key+"="+obj[key]);
+    //   obj2[key] = obj[key];
+    // }
+    // obj.name = "小a";
+    // console.log(obj2);
+
+
+    //深拷贝
+    // let obj = {
+    //   name:"xx",
+    //   age:"20",
+    //   school:"理工",
+    //   student:{
+    //     name:"小a"
+    //   }
+    // }
+
+    // let obj2 = {}
+    // Object.assign(obj2,obj);
+    // obj.student.name = "小b";
+    // console.log(obj2);
+
+    function deepClone(target){
+      // 定义结果变量
+      let result;
+      //判断基本数据类型或引用数据类型
+      if(typeof target === "object"){
+        //判断数组或对象
+        if(Array.isArray(target)){
+          result = []//把结果变量变成数组
+          for(let val of target){
+            result.push(deepClone(val))
+          }
+        }else{
+          result = {}//把结果变量变成对象
+          for(let item in target){
+            result[item] = deepClone(target[item])
+          }
+        }
+
+      }else{
+        result = target;
+      }
+      return result;
+    }
+
+    let obj = {
+      name:"xx",
+      age:"20",
+      school:"理工",
+      student:{
+        name:"小a"
+      }
+    }
+    let obj2 = deepClone(obj)
+    obj.student.name = "小b";
+    console.log(obj2);
+    
+    let arr = [1,2,["a","b"],4,5];
+    let arr2 = deepClone(arr);
+    arr[2][0] = "hello";
+    console.log(arr2);
+    
+
+    
+    
+    // let str = "hello";
+    // let obj = {};
+    // let arr = [];
+    // console.log(typeof str);
+    // console.log(typeof obj);
+    // console.log(typeof arr);
+    // console.log(Array.isArray(obj),Array.isArray(arr));
+    
+    // console.log(Object.prototype.toString.call(str));
+    
+
+    
+    
+    
+
+  </script>
+</body>
+</html>

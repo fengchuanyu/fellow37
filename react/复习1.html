@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/react.development.js"></script>
+  <script src="./js/react-dom.development.js"></script>
+  <script src="./js/babel.min.js"></script>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+  <script type="text/babel">
+  class Foo2 extends React.Component{
+      constructor(props){
+        super(props)
+      }
+      changeHandle(){
+        console.log("子组件props",this.props)
+        this.props.cHandle()
+      }
+      render(){
+        return (
+          <div onClick={this.changeHandle.bind(this)}>
+            这是子组件{this.props.a}
+          </div>
+        )
+      }
+    }
+    class Foo extends React.Component{
+      constructor(props){
+        super(props)
+        this.state={
+          num:10
+        }
+      }
+      changeHandle(){
+        console.log('父组件props',this.props)
+        this.setState({
+          num:100
+        })
+      }
+      render(){
+        return (
+          <div>
+            <Foo2 cHandle = {this.changeHandle.bind(this)} a={this.state.num}/>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(
+      <Foo b="hello"/>,
+      document.getElementById("root")
+    )
+  </script>
+</body>
+</html>

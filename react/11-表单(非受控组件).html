@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/react.development.js"></script>
+  <script src="./js/react-dom.development.js"></script>
+  <script src="./js/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root">
+
+  </div>
+  <script type="text/babel">
+
+    class Foo extends React.Component{
+      constructor(props){
+        super(props)
+        this.state={
+          inpVal:"",
+        }
+        this.inp1 = React.createRef();
+        this.inp2 = React.createRef();
+        this.inp3 = React.createRef();
+      }
+
+      submitHandle(e){
+        console.log(this.inp1.current.value)
+        console.log(this.inp2.current.value)
+        console.log(this.inp3.current.checked)
+        e.preventDefault();
+      }
+
+      render(){
+        return(
+          <div>
+          <form onSubmit={this.submitHandle.bind(this)}>
+            <input ref={this.inp1} type="text"/>  
+            <select ref={this.inp2}>
+              <option value="grapefruit">葡萄柚</option>
+              <option value="lime">酸橙</option>
+              <option value="coconut">椰子</option>
+              <option value="mango">芒果</option>
+            </select>
+            <input ref={this.inp3} type="checkbox"/>
+            <button type="submit">提交</button>
+          </form>  
+            <h1>{this.state.inpVal}</h1>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(
+      <Foo/>,
+      document.getElementById("root")
+    )
+  </script>
+</body>
+
+</html>

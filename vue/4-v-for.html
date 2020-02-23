@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(val,key) in arr">{{ val }} -- {{key}}</li>
+    </ul>
+    <ul>
+      <!-- 第一个是 value(值) 第二个key（数姓名）第三个索引 -->
+      <li v-for="(item,key,index) in obj">{{item}} -- {{key}} --- {{index}}</li>
+    </ul>
+    <p v-for="i in str">{{i}}</p>
+    <ul>
+      <li v-for="item in goodsList">
+        商品名称：{{item.name}} --- 商品价格：{{item.price}}-----商品库存：{{item.num}}
+      </li>
+    </ul>
+  </div>
+  <script>
+    let app = new Vue({
+      el:"#app",
+      data:{
+        arr:[1,2,3,4,5,6],
+        obj:{
+          name:"小a",
+          school:"理工",
+          age:"20"
+        },
+        str:"hello world",
+        goodsList:[
+          {
+            name:"衣服",
+            price:200,
+            num:100
+          },
+          {
+            name:"裤子",
+            price:100,
+            num:300
+          },
+          {
+            name:"鞋",
+            price:300,
+            num:200
+          }
+        ]
+      }
+    })
+  </script>
+</body>
+</html>

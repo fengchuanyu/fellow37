@@ -8,20 +8,29 @@
   <style>
     #can{
       background-color: #000;
-      
+      /* width: 400px;
+      height: 400px; */
     }
   </style>
 </head>
 <body>
-  <canvas id="can" width="400" height="400"></canvas>
+  <canvas id="can"></canvas>
   <script>
     var oCan = document.getElementById("can");
     var context = oCan.getContext("2d");
-    context.strokeStyle = "red";
-    context.beginPath();
-    context.moveTo(10,10);
-    context.lineTo(100,100);
-    context.stroke();
+    context.strokeStyle = "#fff";
+    oCan.onmousedown = function(e){
+      context.beginPath();
+      context.moveTo(e.clientX,e.clientY);
+      oCan.onmousemove = function(e){
+        context.lineTo(e.clientX,e.clientY);
+        context.stroke();
+      }
+      oCan.onmouseup = function(){
+        oCan.onmousemove = null;
+      }
+    }
+
   </script>
 </body>
 </html>

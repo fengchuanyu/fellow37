@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let setArr = new Set();
+    // setArr.add(1);
+    // setArr.add("hello")
+    // setArr.add(2);
+    // // setArr.delete(1);
+    // // setArr.clear();
+    // console.log(setArr.size);
+    // // console.log(setArr.has("ahello"));
+    // for(let val of setArr){
+    //   console.log(val);
+      
+    // }
+
+    let ws = new WeakSet();
+    ws.add({name:"小a"})
+    // ws.add("hello")
+    console.log(ws);
+    
+    
+
+    let arr = [1,2,3,4,4,5,6];
+    let setArr = new Set(arr);
+    console.log(Array.from(setArr));
+    
+    // console.log(setArr);
+    
+
+      
+  </script>
+</body>
+</html>

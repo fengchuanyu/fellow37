@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <script>
+    // function* foo(){
+    //   console.log("0");
+    //   yield console.log("1");
+    //   console.log("00")
+    //   yield console.log("2");
+    // }  
+    // let foo2 = foo();
+    // foo2.next();
+    // foo2.next();
+
+    // function* helloWorldGenerator() {
+    //   yield 'hello';
+    //   yield 'world';
+    //   return 'ending';
+    // }
+    // let hw = helloWorldGenerator();
+    // console.log(hw.next())
+    // console.log(hw.next())
+    // console.log(hw.next())
+
+    // function* foo(x) {
+    //   var y = 2 * (yield (x + 1));
+    //   var z = yield (y / 3);
+    //   return (x + y + z);
+    //   // console.log(yield (x + 1))
+    // }
+
+    // var a = foo(5);
+    // console.log(a.next());
+    // console.log(a.next(6));
+    // console.log(a.next(4));
+
+    function getData(url){
+      $.get(url,function(res){
+        a.next(res);
+      })
+    }
+    function* foo(){
+      console.log(yield getData("./data/a.json"));
+      console.log(yield getData("./data/b.json"));
+      console.log(yield getData("./data/c.json"));
+    }
+    let a = foo();
+    a.next();
+    
+
+  </script>
+</body>
+</html>

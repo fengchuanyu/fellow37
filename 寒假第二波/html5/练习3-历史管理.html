@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li{
+      list-style: none;
+      float: left;
+      height: 50px;
+      width: 100px;
+      background-color: gray;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+    }
+    .active{
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li data-name="first" class="active">first</li>
+    <li data-name="second" >second</li>
+    <li data-name="third" >third</li>
+  </ul>
+  <script>
+    var aLi = document.querySelectorAll("li");
+    for(var i=0;i<aLi.length;i++){
+      aLi[i].onclick = function(){
+        for(var j =0;j<aLi.length;j++){
+          aLi[j].className = "";
+        }
+        this.className = "active";
+        location.hash = this.dataset.name;
+      }
+    }
+
+    window.onhashchange = function(){
+      var thisHash = location.hash.substr(1);
+      for(var i=0;i<aLi.length;i++){
+        if(aLi[i].dataset.name == thisHash){
+          aLi[i].className = "active";
+        }else{
+          aLi[i].className = "";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/react.development.js"></script>
+  <script src="./js/react-dom.development.js"></script>
+  <script src="./js/babel.min.js"></script>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+  <script type="text/babel">
+    function Com1() {
+
+      let cName = "active"
+
+      let stylea = {
+        fontSize:"20px",
+        color:'blue'
+      }
+      return(
+        <div>
+          <h1 style={stylea} className={cName}> hello </h1>  
+        </div>
+      )
+    }
+
+    class Com2 extends React.Component{
+      constructor(props){
+        super(props)
+        this.state={
+          cName:'active',
+          // stylea:{
+          //   fontSize:"20px",
+          //   color:'blue'
+          // }
+        }
+      }
+
+      render(){
+        let stylea = {
+          fontSize:"20px",
+          color:'blue'
+        }
+        return(
+          <h1 style={stylea}  className={this.state.cName}> fellow 37 </h1>
+        )
+      }
+    }
+
+    ReactDOM.render(
+      <Com2/>,
+      document.getElementById("root")
+    )
+  </script>
+</body>
+</html>

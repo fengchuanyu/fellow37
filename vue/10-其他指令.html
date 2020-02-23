@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+  <style>
+    [v-cloak]{
+      display: none
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div v-pre>{{num}}</div>
+    <div v-cloak>hello</div>
+    <button @click="clickHandle">add</button>
+    <p v-once>{{sum}}</p>
+  </div>
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        num:"123",
+        sum:0
+      },methods: {
+        clickHandle(){
+          this.sum++;
+          console.log("hello");
+        }
+      }
+
+    })
+  </script>
+</body>
+</html>

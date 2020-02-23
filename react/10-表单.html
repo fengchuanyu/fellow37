@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/react.development.js"></script>
+  <script src="./js/react-dom.development.js"></script>
+  <script src="./js/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root">
+
+  </div>
+  <script type="text/babel">
+
+    class Foo extends React.Component{
+      constructor(props){
+        super(props)
+        this.state={
+          inpVal:"",
+          inp:{
+            inp1:"",
+            inp2:"",
+            inp3:false
+          }
+        }
+      }
+
+      changeVal(e){
+        this.setState({
+          inpVal:e.target.value
+        })
+      }
+
+      changeVal2(e){
+        console.log(e.target.value)
+      }
+
+      changeVal3(e){
+        console.log(e.target.checked)
+      }
+
+      inpHandle(e){
+        // console.log(e.target.name)
+        let thisVal = e.target.name=="inp3"?e.target.checked:e.target.value;
+        let objVal = {
+          [e.target.name]:thisVal
+        }
+        // let newVal = {}
+        // Object.assign(newVal,this.state.inp,objVal);
+        this.setState({
+          inp:{...this.state.inp,...objVal}
+        },()=>{
+          console.log(this.state.inp);
+        })
+        
+        
+      }
+
+      render(){
+        return(
+          <div>
+            {/*<input onChange={this.changeVal.bind(this)} type="text"/>  
+            <select onChange={this.changeVal2.bind(this)}>
+              <option value="grapefruit">葡萄柚</option>
+              <option value="lime">酸橙</option>
+              <option value="coconut">椰子</option>
+              <option value="mango">芒果</option>
+            </select>
+            <input type="checkbox" onChange={this.changeVal3.bind(this)}/>
+          <h1>{this.state.inpVal}</h1>*/}
+          <input name="inp1" onChange={this.inpHandle.bind(this)} type="text"/>  
+            <select name="inp2" onChange={this.inpHandle.bind(this)}>
+              <option value="grapefruit">葡萄柚</option>
+              <option value="lime">酸橙</option>
+              <option value="coconut">椰子</option>
+              <option value="mango">芒果</option>
+            </select>
+            <input name="inp3" type="checkbox" onChange={this.inpHandle.bind(this)}/>
+          <h1>{this.state.inpVal}</h1>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(
+      <Foo/>,
+      document.getElementById("root")
+    )
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <script>
+    // console.log("123");
+    // setTimeout(function(){
+    //   console.log("hello");
+    // },1000)
+    // console.log("456");  
+
+    // 回调地狱
+    // $.get("./data/a.json",function(res){
+    //   console.log(res);
+    //   $.get("https://api.myjson.com/bins/173hcy",function(res){
+    //     console.log(res);
+    //     $.get("./data/c.json",function(res){
+    //       console.log(res);
+    //     })
+    //   })
+    // })
+
+    // let promise1 = new Promise(function(resolve,reject){
+    //   let num = 0
+    //   setTimeout(function(){
+    //     num = 10;
+    //     // resolve(num)
+    //     reject();
+    //   },1000)
+    // })
+
+    // promise1.then(function(res){
+    //   console.log(res);
+    // }).catch(function(res){
+    //   console.log("erro")
+    // })
+
+    function getData(url){
+      // let promise1 = null;
+      // promise1 = new Promise(function(resolve,reject){
+      //   $.get(url,function(res){
+      //     resolve(res);
+      //   })
+      // })
+      // return promise1;
+      return new Promise(function(resolve,reject){
+        $.get(url,function(res){
+          resolve(res);
+        })
+      })
+    }
+
+    // getData("./data/a.json").then(function(res){
+    //   console.log(res);
+    //   return getData("./data/b.json")
+    // }).then(function(res){
+    //   console.log(res);
+    //   return getData("./data/c.json")
+    // }).then(function(res){
+    //   console.log(res)
+    // })
+
+    // let promise1 = new Promise(function(resolve,reject){
+    //   $.get("./data/a.json",function(res){
+    //     reject(res);
+    //   })
+    // })
+    // let promise2 = new Promise(function(resolve,reject){
+    //   $.get("./data/b.json",function(res){
+    //     reject();
+    //   })
+    // })
+    // let promise3 = new Promise(function(resolve,reject){
+    //   $.get("./data/c.json",function(res){
+    //     resolve(res);
+    //   })
+    // })
+    // Promise.all([promise1,promise2,promise3]).then(function(res){
+    //   console.log("成功")
+    // },function(){
+    //   console.log("失败")
+    // })
+
+    // Promise.race([promise1,promise2,promise3]).then(function(res){
+    //   console.log("成功")
+    // },function(){
+    //   console.log("失败")
+    // })
+
+
+
+
+    
+    
+  </script>
+</body>
+</html>

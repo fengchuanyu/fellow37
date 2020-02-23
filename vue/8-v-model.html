@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+   <!-- <input type="text" placeholder="请输入内容" @keyup="clickHandle($event)">
+   -->
+   <input type="text" placeholder="请输入内容" v-model="str">
+   <input type="text" placeholder="请输入内容" v-model.lazy="str">
+   <input type="text" placeholder="请输入内容" v-model.number="str">
+   <input type="text" placeholder="请输入内容" v-model.trim="str">
+   <p>{{ str }}</p>
+
+   <select name="" id="" v-model="school">
+     <option value="黑大">黑大</option>
+     <option value="理工">理工</option>
+     <option value="林大">林大</option>
+     <option value="工程">工程</option>
+   </select>
+   <p> {{school}} </p>
+
+   篮球<input type="checkbox" name="hobby" value="篮球" v-model="arr">
+   足球<input type="checkbox" name="hobby" value="足球" v-model="arr">
+   网球<input type="checkbox" name="hobby" value="网球" v-model="arr">
+   乒乓球<input type="checkbox" name="hobby" value="乒乓球" v-model="arr">
+   <p> {{ arr }} </p>
+
+   男<input type="radio" name="sex" value="男" v-model="sex">
+   女<input type="radio" name="sex" value="女" v-model="sex">
+   <p>{{sex}}</p>
+  </div>
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+       str:0,
+       school:"理工",
+       arr:[],
+       sex:""
+      },
+      methods: {
+        // clickHandle(e){
+        //   console.log(e.target.value)
+        //   this.str = e.target.value
+        // }  
+      }
+    })
+  </script>
+</body>
+</html>

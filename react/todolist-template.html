@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    .container{
+      padding-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="container">
+    <div class="form-bar">
+      <form class="form-inline">
+        <input name="info" type="text" class="form-control mb-2 mr-sm-2" placeholder="待办事项" />
+        <input name="time" type="date" class="form-control mb-2 mr-sm-2" />
+        <div class="input-group mb-2 mr-sm-2">
+          <input name="count" type="text" class="form-control" placeholder="待代办时间" />
+        </div>
+        <button type="button" class="btn btn-primary mb-2">Submit</button>
+      </form>
+    </div>
+    <div class="table-bar">
+        <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">代办事项</th>
+                <th scope="col">代办时间</th>
+                <th scope="col">预计用时</th>
+                <th scope="col">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+                <input type="checkbox" readOnly/>
+            </th>
+            <td>上课</td>
+            <td>2020-02-20</td>
+            <td>1</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-sm">删除</button>
+            </td>
+        </tr>
+            <tr>
+                <td><button type="button" class="btn btn-primary btn-sm">删除选中</button></td>
+                <td colSpan="4">1</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+  </div>
+</body>
+
+</html>

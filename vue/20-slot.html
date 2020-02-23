@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <com1>
+      <template v-slot:slot1>
+          <span>fellow37</span>
+      </template>
+      <template v-slot:slot2>
+          <span>world</span>
+      </template>
+    </com1>
+  </div>
+  <template id="com1">
+    <div>
+      <slot name="slot1"></slot>
+      hello
+      <slot name="slot2"></slot>
+    </div>
+  </template>
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        
+      },
+      components:{
+        com1:{
+          template:"#com1"
+        },
+      }
+    })
+  </script>
+</body>
+</html>

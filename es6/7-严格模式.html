@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 'use strict'  
+
+    // var a = 10;
+    // console.log(a);
+
+    // function foo(){
+    //   console.log(this);
+    // }
+    // foo()
+
+    let arr = new Array(1,2,3,4); // Array 构造函数  arr 实例化对象
+    // console.log(arr);
+
+    // function Person(){
+    //   this.name = "小a";
+    //   this.school = "理工";
+    // }
+    // let student = new Person();
+    // new 第一步 创建控对象
+    //     第二步 Person.call(空对象)
+       //  第三步 原型指向
+      //   第四部 把创建好的对象赋值给等号左边
+
+    // console.log(student.name);
+
+
+    function Person(name){
+      this.name = name;
+      this.school = "黑大";
+    }
+    Person.prototype.showInfo = function(){
+      console.log("姓名"+this.name);
+      console.log("学校"+this.school);
+    }
+
+    let student = new Person("小a");
+    // let student2= new Person("小B");
+    console.log(student.name);
+    // // console.log(student2.name);
+    student.showInfo()
+    // student2.showInfo()
+
+
+    // 'use strict'
+
+    // function Person(name){
+    //   this.name = name;
+    //   this.school = "黑大";
+    // }
+    // Person();
+
+    // var a = 1;
+    // var a = 2;
+
+    // 'use strict'
+    // function foo(a,a,b){
+    //   console.log(a,b);
+    // }
+    // foo(1,2,3);
+    // 'use strict'
+    // let obj = {
+    //   name:"abc"
+    // }
+    // with(obj){
+    //   console.log(name)
+    // }
+
+
+    // let num = 0;  
+    // for(var i=1;i<11;i++){
+    //   num+=i;
+    // }
+    // console.log(num);
+
+    // 'use strict'
+    // function foo(num){
+    //   if(num == 1){
+    //     return 1
+    //   }else{
+    //     return num + arguments.callee(num-1)
+    //   }
+    // }
+    // console.log(foo(10))
+    
+
+    // function foo(){
+    //   'use strict'
+      
+    // }
+    // foo();
+    
+    // a=10;
+
+    // function foo(a=10){
+    //   'use strict'
+    // }
+
+    
+    
+  </script>
+</body>
+</html>

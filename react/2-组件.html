@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/react.development.js"></script>
+  <script src="./js/react-dom.development.js"></script>
+  <script src="./js/babel.min.js"></script>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+  <script type="text/babel">
+    // let str = <div>
+    //     <h1> hello world </h1>
+    //     <h1> flellow 37 </h1>
+    //   </div>
+    
+    //无状态组件 => 函数组件 
+    function Foo(props) {
+      
+      let num = 0;
+      return (
+        <div>
+        <h1> hello world </h1>
+        <h1> flellow 37 </h1>
+        <h1> {props.msg} </h1>
+        <h1> {num} </h1>
+      </div>
+      )
+    }
+
+
+    ReactDOM.render(
+      <Foo msg="fellow"/>,
+      document.getElementById("root")
+    )
+  </script>
+</body>
+</html>

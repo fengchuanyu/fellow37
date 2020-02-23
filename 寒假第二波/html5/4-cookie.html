@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="add">add</button>
+  <button id="print">print</button>
+  <script>
+
+    var timer = new Date();
+    timer.setDate(timer.getDate()+1)
+    // document.cookie = "fellow=37;expires="+timer.toUTCString();
+    document.cookie = "fellow=37;expires="+timer.toUTCString();
+    document.cookie = "fellow2=hello;expires="+timer.toUTCString();
+    console.log(document.cookie)
+
+    // setCookie("fellow","37",1);
+    // getCookis("fellow");//37
+    // delCookie("fellow");
+
+
+
+    // var num = 0;
+    // var oAdd = document.querySelector("#add");
+    // var oPrint = document.querySelector("#print");
+    // oAdd.onclick = function(){
+    //   num++;
+    // }
+    // oPrint.onclick = function(){
+    //   console.log(num);
+    // }
+
+  </script>
+</body>
+</html>

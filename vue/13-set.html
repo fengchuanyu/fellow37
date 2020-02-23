@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="val in arr">{{val}}</li>
+    </ul>
+    <button @click="changeHandle">change</button>
+    <ul>
+      <li v-for="item in obj">
+        {{item}}
+      </li>
+    </ul>
+    <button @click="changeHandle2">change2</button>
+  </div>
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        arr:[1,2,3,4,5],
+        obj:{
+          name:"小明",
+          age:20,
+          school:'理工'
+        }
+      },
+      methods: {
+        changeHandle(){
+          // this.arr[1] = "a";
+          // let newArr = [...this.arr];
+          // newArr[1] = 'a';
+          // this.arr = newArr;
+          // console.log(this.arr)
+
+          // this.arr.push(6);
+          Vue.set(this.arr,1,'a');
+        },
+        changeHandle2(){
+          // this.obj.sex = "男";
+          // console.log(this.obj);
+          Vue.set(this.obj,'sex','男');
+        }
+      }
+    })
+  </script>
+</body>
+</html>

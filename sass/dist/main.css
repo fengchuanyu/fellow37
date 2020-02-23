@@ -1,0 +1,189 @@
+#div1 {
+  background-color: blue;
+}
+#div1 #div2 {
+  color: red;
+}
+
+#box {
+  color: blue;
+}
+#box #box2 {
+  font-size: 20px;
+}
+#box:hover {
+  color: red;
+}
+#box-heaer {
+  font-size: 10px;
+}
+#box-footer {
+  background-color: #fff;
+}
+
+#div3 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: red;
+}
+
+#div4 {
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  font-size: 20px;
+}
+
+#div5, #div6 {
+  background-color: green;
+  font-size: 30px;
+  width: 100px;
+}
+
+#div6 {
+  height: 200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#div7 {
+  width: 1.5px;
+  height: 100px;
+}
+
+#div8 {
+  width: 8%;
+  background-image: url("./img/XX.JPG");
+}
+
+#div9 {
+  color: rgba(255, 255, 0, 0.7);
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+#div10 {
+  border: 1px solid black;
+  color: red;
+}
+
+#div11 {
+  color: red;
+  font-size: 30px;
+}
+
+#div12 {
+  color: red;
+}
+
+#div13 {
+  color: red;
+}
+
+/* test hello */
+/*test 22*/
+/*! test3 */
+#div14 {
+  color: green;
+}
+
+#test-1 {
+  width: 100px;
+}
+
+#test-2 {
+  width: 200px;
+}
+
+#test-3 {
+  width: 300px;
+}
+
+#test-4 {
+  width: 400px;
+}
+
+#test-5 {
+  width: 500px;
+}
+
+#test-6 {
+  width: 600px;
+}
+
+#test-7 {
+  width: 700px;
+}
+
+#test-8 {
+  width: 800px;
+}
+
+#test-9 {
+  width: 900px;
+}
+
+#test-red {
+  color: red;
+}
+
+#test-blue {
+  color: blue;
+}
+
+#test-green {
+  color: green;
+}
+
+#test-yellow {
+  color: yellow;
+}
+
+#span-1 {
+  width: 10px;
+}
+
+#span-2 {
+  width: 20px;
+}
+
+#span-3 {
+  width: 30px;
+}
+
+#span-4 {
+  width: 40px;
+}
+
+#span-5 {
+  width: 50px;
+}
+
+#span-6 {
+  width: 60px;
+}
+
+#span-7 {
+  width: 70px;
+}
+
+#span-8 {
+  width: 80px;
+}
+
+#span-9 {
+  width: 90px;
+}
+
+/*# sourceMappingURL=main.css.map */
