@@ -15,7 +15,6 @@ const MenuLink = ({to,label}) =>{
     <Route
       path={to}
       children={({match})=>{
-        console.log(match)
         return(
           <div>
             {match?'>':""}
@@ -29,16 +28,17 @@ const MenuLink = ({to,label}) =>{
 
 export default class Page5 extends Component {
   render() {
+    console.log(this.props)
     return (
       <div>
         <h1>Page5</h1>
         <Router>
-          <MenuLink to='/page5/com1' label="com1" />|
-          <MenuLink to='/page5/com2' label="com2" />
+          <MenuLink to={this.props.match.path+'/com1'} label="com1" />|
+          <MenuLink to={this.props.match.path+'/com2'} label="com2" />
           {/* <Route path="/page5/test" children={({match})=>(<Link to="/page5/test">test</Link>)} /> */}
           <Switch>
-            <Route path="/page5/com1" component={Com1}/>
-            <Route path="/page5/com2" component={Com2}/>
+            <Route path={this.props.match.path+'/com1'} component={Com1}/>
+            <Route path={this.props.match.path+'/com2'} component={Com2}/>
           </Switch>
         </Router>
       </div>
