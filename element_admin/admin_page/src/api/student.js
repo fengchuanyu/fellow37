@@ -7,3 +7,11 @@ export function addStudent(data) {
     data
   })
 }
+
+export function getStudent(params) {
+  return request({
+    url: '/student/list',
+    method: 'get',
+    params
+  })
+}
